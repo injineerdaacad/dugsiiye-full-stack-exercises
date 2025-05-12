@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "name": "Mohamed",
+  "city": "Mogadishu",
+  "studies": [
+    { "school": "Al-Imra", "year": 2013 },
+    { "school": "SNU", "year": 2021 }
+  ]
+}
