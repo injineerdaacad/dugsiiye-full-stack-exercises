@@ -1,0 +1,47 @@
+/* body ga guud */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Habeenta Navigation-bar ka */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  font-size: 1.25rem;
+  margin-bottom: 2vh;
+}
+
+/* Gudaha Box-yada */
+.content-box {
+  width: 50%;
+  max-width: 300px;
+  height: 10vh;
+  background-color: lightblue;
+  display: inline-block;
+  margin: 2vw;
+  line-height: 10vh;
+}
+
+/* Habeen gaar ah oo Margin ka */
+#box1 {
+  margin-top: 5vh; 
+}
+
+#box2 {
+  margin-left: 10%; 
+}
+
+#box3 {
+  margin-bottom: 3rem;
+}
+
+/* Habeenta Footer ka */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1.5em; 
+  margin-top: 5vh;
+}

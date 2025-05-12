@@ -1,0 +1,27 @@
+/* Habeenta (div) */
+#div1 {
+  display: block;
+  background-color: lightblue;
+  margin-bottom: 5%;
+  padding: 2em;
+}
+
+/* Habeenta (span) */
+#span1 {
+  display: inline;
+  background-color: lightcoral;
+  padding: 1em;
+}
+
+/* Hidden Element (div) */
+#div2 {
+  display: none;
+}
+
+/* Span ka dhig Block-level Element */
+#span2 {
+  display: block;
+  background-color: yellow;
+  padding: 0.7em;
+  margin-top: 5%;
+}

@@ -1,0 +1,69 @@
+/* Habeenta guud */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+/* Habeenta Container ka */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* Habeenta Item yada */
+.container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 30px;
+  background-color: #007bff;
+  border: yellow 2px solid;
+  border-radius: 0.3125rem;
+}
+
+/* Habeenta main section ka */
+.item1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* Habeenta Responsive ka */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .item1 {
+    grid-column: 1 / span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .item1 {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .item5 {
+    grid-column: span 1;
+  }
+}

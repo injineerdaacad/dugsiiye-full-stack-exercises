@@ -1,0 +1,45 @@
+/* Habeenta Guud */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Habeenta Container ka */
+.media-player {
+  display: flex;
+  width: 18rem;
+  background: #333;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  gap: 0.3125rem;
+}
+
+/* btn kontrol ka */
+.control-button {
+  flex: 1;
+  padding: 0.625rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #555;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+}
+
+.play {
+  flex: 2;
+  background-color: #007bff;
+}
+
+.control-button:hover {
+  opacity: 0.8;
+}

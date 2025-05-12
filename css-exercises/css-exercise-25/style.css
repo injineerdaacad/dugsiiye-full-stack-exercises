@@ -1,0 +1,152 @@
+/* Habeenta guud */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: #f8f8f8;
+}
+
+/* Habeenta Hero-ga */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vh 10vw;
+  margin-bottom: 20px;
+}
+
+.content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Habeenta Button ka */
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #252525;
+  color: white;
+  border: 2px solid #252525;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: white;
+  color: #252525;
+}
+
+/* Habeenta Sawir-ka */
+.images {
+  flex: 1;
+  position: relative;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Sawirka 1 aad */
+.spiral {
+  width: 20vw;
+  height: 50vh;
+  max-width: 300px;
+  border-top-right-radius: 200px;
+  border-top-left-radius: 200px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sawirka 2 aad */
+.archway {
+  width: 30vw;
+  max-width: 200px;
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+  border-top-right-radius: 200px;
+  border-top-left-radius: 200px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Habeenta feature-ka */
+.features {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 4vh 10vw;
+  border-radius: 20px;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.feature {
+  width: 30%;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.feature i {
+  font-size: 0.8rem;
+  color: #929292;
+  margin-bottom: 0;
+  margin-right: 50px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Habeenta Responsive-ka */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .images {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .spiral,
+  .archway {
+    width: 50vw;
+    max-width: 250px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}

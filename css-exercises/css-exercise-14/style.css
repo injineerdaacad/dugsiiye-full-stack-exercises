@@ -1,0 +1,28 @@
+/* Habeen guud */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Habeenta container ka */
+.content-wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Habeenta Cinwaan ka */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #000000;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+section {
+  padding-bottom: 3.5rem;
+}

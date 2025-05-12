@@ -1,0 +1,60 @@
+/* body ga guud */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3533cb98;
+  padding: 2rem;
+}
+
+/* Container ka testimonial ka */
+.testimonial-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Dhamaan testimonial ka */
+.testimonial {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* testimonial 1 */
+.testimonial-1 {
+  background: #ffadad;
+  color: #000;
+}
+
+/* testimonial 2 */
+.testimonial-2 {
+  background: #ffd6a5;
+  color: #000;
+}
+
+/* testimonial 3 */
+.testimonial-3 {
+  background: #caffbf;
+  color: #000;
+}
+
+/* Qoraalada testimonial ka  */
+.testimonial h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.testimonial p {
+  font-size: 1rem;
+}
+
+.author {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #007bff;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #666;
+}

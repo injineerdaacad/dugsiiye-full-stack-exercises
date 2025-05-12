@@ -1,0 +1,30 @@
+/* body ga guud */
+body {
+  font-family: "Georgia", serif;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Oraahda */
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-left: 4px solid #007bff;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer ka */
+footer {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #007bff;
+  margin-top: 0.5rem;
+  display: block;
+}

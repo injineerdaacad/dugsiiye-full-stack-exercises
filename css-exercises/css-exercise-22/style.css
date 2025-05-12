@@ -1,0 +1,88 @@
+/* Habeenta Guud */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2vw;
+}
+
+/* Habeenta Container ka */
+.profile-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vw;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Habeenta Card walba */
+.card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  flex: 1 1 calc(50% - 2vw); /* 2 Columns */
+  max-width: 400px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Habeenta Image ka */
+.card img {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+}
+
+/* Habeenta qoraal ka */
+.info {
+  padding: 1rem;
+}
+
+.info h2 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.info p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+/* Habeenta link-iga */
+.info a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.info a:hover {
+  background: #0056b3;
+}
+
+/* Responsive: 1 Column on Small Screens */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 80%;
+  }
+}

@@ -1,0 +1,73 @@
+/* Habeenta Guud */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+img {
+  width: 100%;
+}
+
+/* Habeenta menu ga */
+.navbar {
+  width: 100%;
+  background-color: #333;
+  padding: 1em;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 1.5em;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: aqua;
+}
+
+/* Habeenta gallery container ka */
+.gallery {
+  display: block;
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+}
+
+/* Habeenta shay walba */
+.gallery-item {
+  display: inline-block;
+  width: 30%;
+  margin: 1.5em 1%;
+  border-radius: 0.8em;
+  overflow: hidden;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  height: auto;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}

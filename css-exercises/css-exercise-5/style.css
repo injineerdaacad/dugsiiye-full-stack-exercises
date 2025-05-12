@@ -1,0 +1,30 @@
+/* body ga guud */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* === Cinwaanka (h2) === */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00b7ff;
+}
+
+/* Qoraalka (p) */
+p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*  important ka */
+.important {
+  text-decoration: underline;
+  color: #ff5733;
+}

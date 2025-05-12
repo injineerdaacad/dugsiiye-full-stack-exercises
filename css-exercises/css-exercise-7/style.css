@@ -1,0 +1,30 @@
+/* Xiritaanka naqshadaynta guud ee body-ga */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Naqshadeynta Text Block-yada */
+.text-block {
+  background-color: rgb(82, 203, 21);
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+/* Text Block 1: Padding badan */
+#block1 {
+  padding: 40px;
+}
+
+/* Text Block 2: Padding yar */
+#block2 {
+  padding: 10px;
+}
+
+/* Text Block 3: Padding dhexdhexaad */
+#block3 {
+  padding: 20px;
+}

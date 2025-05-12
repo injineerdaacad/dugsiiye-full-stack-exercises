@@ -1,0 +1,56 @@
+/* Habeenta Guud */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+img {
+  width: 100%;
+}
+
+/* Habeenta Profile ka */
+.profile-card {
+  position: relative;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+.profile-image {
+  display: block;
+}
+
+.user-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Habeenta Qoraal ka */
+.user-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user-location {
+  font-size: 0.7rem;
+  margin: 5px 0 0;
+}

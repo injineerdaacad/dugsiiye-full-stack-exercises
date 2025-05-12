@@ -1,0 +1,53 @@
+/* Guud ahaan body ga */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+/* Cinwaanada */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Habeenta favorites ka */
+.interest-section {
+  width: 80vw;
+  height: 50vh;
+  margin: 5vh auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* box walba midabkiisa */
+#books {
+  background-color: lightblue;
+}
+
+#movies {
+  background-color: lightgray;
+}
+
+#foods {
+  background-color: lightgreen;
+}
+
+/* Habeenta list-iga */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+li:hover {
+  color: #007bff;
+  cursor: pointer;
+}

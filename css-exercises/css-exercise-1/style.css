@@ -1,0 +1,12 @@
+/* Habeenta listiga */
+ul {
+  list-style-type: square;
+}
+
+li {
+  color: green;
+  background-color: #f0f0f0;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+  margin: 1.25rem 0;
+}
