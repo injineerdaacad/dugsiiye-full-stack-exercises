@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Engineer Honest" />
+    <title>Conference Registration Form</title>
+  </head>
+  <body>
+    <h2>Conference Registration Form</h2>
+
+    <form action="#" method="POST">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required /> <br />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required /> <br />
+
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+252615600765" />
+      </fieldset>
+      <br />
+
+      <!-- Conference Details -->
+      <fieldset>
+        <legend>Conference Details</legend>
+
+        <label>Attendance Type:</label><br />
+        <label
+          ><input type="radio" name="attendance-type" value="virtual" />
+          Virtual</label
+        ><br />
+        <label
+          ><input type="radio" name="attendance-type" value="in-person" />
+          In-person</label
+        ><br />
+
+        <label>Preferred Day(s) of Attendance:</label><br />
+        <label><input type="checkbox" name="days" value="day1" /> Day 1</label
+        ><br />
+        <label><input type="checkbox" name="days" value="day2" /> Day 2</label
+        ><br />
+        <label><input type="checkbox" name="days" value="day3" /> Day 3</label
+        ><br />
+
+        <label for="t-shirt-size">T-shirt Size:</label>
+        <select id="t-shirt-size" name="t-shirt-size">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </fieldset>
+      <br />
+
+      <!-- Sessions of Interest -->
+      <fieldset>
+        <legend>Sessions of Interest</legend>
+
+        <label>Choose your Interest: </label><br />
+        <label
+          ><input type="checkbox" name="sessions" value="web-development" /> Web
+          Development</label
+        ><br />
+        <label
+          ><input type="checkbox" name="sessions" value="data-science" /> Data
+          Science</label
+        ><br />
+        <label
+          ><input type="checkbox" name="sessions" value="cloud-computing" />
+          Cloud Computing</label
+        ><br />
+        <label
+          ><input type="checkbox" name="sessions" value="cybersecurity" />
+          Cybersecurity</label
+        ><br />
+        <label
+          ><input type="checkbox" name="sessions" value="ai-ml" /> AI & Machine
+          Learning</label
+        ><br />
+      </fieldset>
+
+      <!-- Dietary Preferences -->
+      <fieldset>
+        <legend>Dietary Preferences</legend>
+
+        <label>Choose your Dietary Preferences: </label><br />
+        <label
+          ><input type="checkbox" name="diet" value="vegetarian" />
+          Vegetarian</label
+        ><br />
+        <label><input type="checkbox" name="diet" value="vegan" /> Vegan</label
+        ><br />
+        <label
+          ><input type="checkbox" name="diet" value="gluten-free" />
+          Gluten-Free</label
+        ><br />
+        <label
+          ><input type="checkbox" name="diet" value="nut-free" />
+          Nut-Free</label
+        ><br />
+        <label
+          ><input type="checkbox" name="diet" value="dairy-free" />
+          Dairy-Free</label
+        ><br />
+        <label
+          ><input type="checkbox" name="diet" value="no-restrictions" /> No
+          Restrictions</label
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Comments</legend>
+        <label for="comments">Any additional requirements:</label><br />
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Consent</legend>
+        <label
+          ><input type="checkbox" name="subscribe" checked /> Subscribe to
+          newsletter</label
+        ><br />
+      </fieldset>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
