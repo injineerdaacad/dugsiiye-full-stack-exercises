@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 99%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-block: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: skyblue;
+}

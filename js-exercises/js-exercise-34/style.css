@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 99%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-block: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 10%;
+}
+
+.btn.add {
+  background-color: blue;
+}
+
+.btn.add:hover {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.btn.del {
+  background-color: rgb(255, 0, 0);
+}
+
+.btn.del:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
