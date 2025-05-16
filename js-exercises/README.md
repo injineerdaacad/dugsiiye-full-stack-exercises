@@ -37,3 +37,7 @@ These sequential exercises focus on one concept at a time:
 - 📁 [js-exercise-29](./js-exercise-29/) - JSON with Non Blocking Code
 - 📁 [js-exercise-30](./js-exercise-30/) - Callback Function
 - 📁 [js-exercise-31](./js-exercise-31/) - HTTP Request with Fetch
+- 📁 [js-exercise-32](./js-exercise-32/) - DOM Element
+- 📁 [js-exercise-33](./js-exercise-33/) - Manipulating DOM Element
+- 📁 [js-exercise-34](./js-exercise-34/) - Adding and Removing DOM Element
+- 📁 [js-exercise-35](./js-exercise-35/) - Modifying and Styling DOM Element
