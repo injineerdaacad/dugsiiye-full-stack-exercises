@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 99%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2,
+.txt {
+  font-size: 2rem;
+}
+
+#colorPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  margin: 20px 0;
+  border: 1px solid black;
+}
+
+#colorHistory li {
+  margin: 5px 0;
+}
+
+button {
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-block: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: skyblue;
+}
