@@ -42,3 +42,4 @@ These sequential exercises focus on one concept at a time:
 - 📁 [js-exercise-34](./js-exercise-34/) - Adding and Removing DOM Element
 - 📁 [js-exercise-35](./js-exercise-35/) - Modifying and Styling DOM Element
 - 📁 [js-exercise-36](./js-exercise-36/) - DOM Events
+- 📁 [js-exercise-37](./js-exercise-37/) - Simple Blog
