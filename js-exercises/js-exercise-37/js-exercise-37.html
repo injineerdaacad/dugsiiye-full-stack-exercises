@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Engineer Honest" />
+    <title>JS Exercise 37 - Simple Blog Post</title>
+    <!-- Style Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>JS EXERCISE 37 - Simple Blog Post</h1>
+    </div>
+
+    <section id="blog-post">
+      <div><h1>Simple Blog Post</h1></div>
+
+      <div class="container">
+        <h2>Create a new Post</h2>
+
+        <form id="form-id">
+          <input
+            type="text"
+            id="post-title"
+            placeholder="Post Title"
+            required
+          />
+          <input type="text" id="img-url" placeholder="Image URL (Optional)" />
+          <textarea
+            id="post-content"
+            placeholder="Write your post here ..."
+            required
+          ></textarea>
+
+          <button type="submit" id="add-post">Add Post</button>
+        </form>
+
+        <div>
+          <h2>All Posts</h2>
+          <ul id="post"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script Link -->
+    <script src="js-exercise-37.js"></script>
+    <noscript> Browser-kaagu ma taageerayo JavaScript </noscript>
+  </body>
+</html>
