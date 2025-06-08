@@ -44,3 +44,5 @@ These sequential exercises focus on one concept at a time:
 - 📁 [js-exercise-36](./js-exercise-36/) - DOM Events
 - 📁 [js-exercise-37](./js-exercise-37/) - Simple Blog Post
 - 📁 [js-exercise-38](./js-exercise-38/) - Navigation Bar
+- 📁 [js-exercise-39](./js-exercise-39/) - Language Translator
+- 📁 [js-exercise-40](./js-exercise-40/) - Video Player

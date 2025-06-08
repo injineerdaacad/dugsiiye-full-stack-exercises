@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1db954;
+}
+
+.video-player {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-info {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.video-info h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.video-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-container {
+  margin: 15px 0;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 5px;
+  height: 6px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress {
+  background: #1db954;
+  width: 0%;
+  height: 100%;
+  transition: width 0.1s linear;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.control-btn:hover {
+  color: #1db954;
+}
+
+.play-btn {
+  font-size: 30px;
+}
+
+.additional-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.volume-container,
+.speed-container {
+  display: flex;
+  align-items: center;
+}
+
+.volume-container i,
+.speed-container i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #666;
+}
+
+#volume {
+  width: 100px;
+}
+
+#speed {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+}
+
+#speed:focus {
+  outline: none;
+  border-color: #1db954;
+}
+
+@media (max-width: 500px) {
+  .additional-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .volume-container,
+  .speed-container {
+    margin-bottom: 10px;
+  }
+}

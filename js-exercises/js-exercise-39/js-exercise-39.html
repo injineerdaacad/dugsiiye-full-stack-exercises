@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Engineer Honest" />
+    <title>JS Exercise 39 - Language Translator</title>
+    <!-- Style Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>JS EXERCISE 39 - Language Translator</h1>
+    </div>
+
+    <section>
+      <div class="container">
+        <h1>Language Translator</h1>
+
+        <form id="form-id">
+          <label for="country-select-1">From Language:</label>
+          <select id="country-select-1" name="country" required>
+            <option value="" selected>Dooro Luqadda?</option>
+            <!-- From JS -->
+          </select>
+
+          <label for="country-select-2">To Language:</label>
+          <select id="country-select-2" name="country" required>
+            <option value="" selected>Dooro Luqadda?</option>
+            <!-- From JS -->
+          </select>
+
+          <textarea
+            id="translate-content"
+            placeholder="Halkaan soo geli qoraalka ..."
+            required
+          ></textarea>
+
+          <button type="submit" id="translate-btn">Translate</button>
+        </form>
+
+        <div>
+          <h2>Translated Text</h2>
+          <div id="translated-text"><!-- From JS --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script Link -->
+    <script src="js-exercise-39.js"></script>
+    <noscript> Browser-kaagu ma taageerayo JavaScript </noscript>
+  </body>
+</html>
