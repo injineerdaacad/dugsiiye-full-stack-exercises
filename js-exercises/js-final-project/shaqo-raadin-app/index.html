@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaqo Raadis Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header role="banner">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="brand-title">
+          <i class="fas fa-briefcase"></i> Shaqo Raadis
+        </div>
+
+        <a href="#" class="toggle-button" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+        <div class="navbar-links">
+          <ul>
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </li>
+            <li>
+              <a href="register.html"
+                ><i class="fas fa-user-plus"></i> Register</a
+              >
+            </li>
+            <li>
+              <button id="toggle-dark">
+                <i class="fas fa-moon"></i> Dark/Light
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-home" style="margin-top: 80px">
+      <section>
+        <h2><i class="fas fa-bullhorn"></i> Shaqooyinka Hadda La Heli Karo</h2>
+        <p>
+          Raadi shaqooyinka ugu dambeeyay, waxaad arki kartaa dhammaan
+          shaqooyinka adigoon galin account-kaga!
+        </p>
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="job-filter" placeholder="Raadi shaqo..." />
+        </div>
+
+        <div id="job-list" class="job-list">
+          <p>Shaqooyin ayaa la soo xareynayaa...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; 2025 Shaqo Raadis Online | Prepared by Engineer Honest</p>
+      <p>
+        <a href="https://shaqoraadis2025.com" target="_blank" rel="noopener"
+          >shaqoraadis2025.com</a
+        >
+        |
+        <a href="mailto:support@shaqoraadis.so">Contact</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

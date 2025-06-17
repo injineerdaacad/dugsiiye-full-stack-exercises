@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Web Developer",
+    "company": "SomTech",
+    "location": "Mogadishu",
+    "description": "Fahanka HTML, CSS, JavaScript waa muhiim.",
+    "image": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+    "contact": "+3333681659"
+  },
+  {
+    "title": "Accountant",
+    "company": "Qaran Bank",
+    "location": "Afgooye",
+    "description": "Shahaado xisaabeed iyo khibrad 2 sano ah ayaa loo baahan yahay.",
+    "image": "https://images.pexels.com/photos/4386375/pexels-photo-4386375.jpeg",
+    "contact": "+3332334869"
+  },
+  {
+    "title": "Mobile App Developer",
+    "company": "DalkaSoft",
+    "location": "Online",
+    "description": "Khibrad React Native ama Flutter ayaa la doorbidayaa.",
+    "image": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg",
+    "contact": "+3331638117"
+  },
+  {
+    "title": "Nurse",
+    "company": "Banadir Hospital",
+    "location": "Mogadishu",
+    "description": "Ugu yaraan 1 sano oo waayo aragnimo ah ayaa loo baahan yahay.",
+    "image": "https://images.pexels.com/photos/5424512/pexels-photo-5424512.jpeg",
+    "contact": "+3335741344"
+  },
+  {
+    "title": "Driver",
+    "company": "Wadajir Logistics",
+    "location": "Jowhar",
+    "description": "Darawal xirfadaysan oo haysta laysan ayaa loo baahan yahay.",
+    "image": "https://images.pexels.com/photos/4391482/pexels-photo-4391482.jpeg",
+    "contact": "+3338605124"
+  },
+  {
+    "title": "Project Manager",
+    "company": "Somali Projects",
+    "location": "Gaalkacyo",
+    "description": "Khibrad maaraynta mashaariicda iyo hogaaminta kooxaha ayaa muhiim ah.",
+    "image": "https://images.pexels.com/photos/3184320/pexels-photo-3184320.jpeg",
+    "contact": "+3334215044"
+  },
+  {
+    "title": "Social Media Manager",
+    "company": "Somali Digital",
+    "location": "Kismayo",
+    "description": "Khibrad maareynta baraha bulshada iyo suuqgeynta ayaa muhiim ah.",
+    "image": "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg",
+    "contact": "+3339294849"
+  },
+  {
+    "title": "Content Writer",
+    "company": "Somali Writers",
+    "location": "Raaso",
+    "description": "Qorayaasha leh xirfado wanaagsan oo qoraal ah ayaa la doorbidayaa.",
+    "image": "https://images.pexels.com/photos/3769720/pexels-photo-3769720.jpeg",
+    "contact": "+3338429075"
+  },
+  {
+    "title": "Cybersecurity Specialist",
+    "company": "Somali Cyber Defense",
+    "location": "Hargeisa",
+    "description": "Khibrad amniga internetka iyo ilaalinta xogta ayaa loo baahan yahay.",
+    "image": "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
+    "contact": "+3337060641"
+  },
+  {
+    "title": "Office Secretary",
+    "company": "Barwaaqo Group",
+    "location": "Bosaso",
+    "description": "Xirfado xagga maamulka, qoraalka iyo taleefanka ayaa muhiim ah.",
+    "image": "https://images.pexels.com/photos/3184643/pexels-photo-3184643.jpeg",
+    "contact": "+3338613412"
+  },
+  {
+    "title": "Graphic Designer",
+    "company": "Xidig Media",
+    "location": "Hargeisa",
+    "description": "Khibrad Photoshop, Illustrator iyo Canva waa muhiim.",
+    "image": "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg",
+    "contact": "+3338049996"
+  },
+  {
+    "title": "UX/UI Designer",
+    "company": "Somali Design Studio",
+    "location": "Bosaso",
+    "description": "Khibrad naqshadeynta UX/UI iyo barnaamijyada naqshadeynta ayaa muhiim ah.",
+    "image": "https://images.pexels.com/photos/3861963/pexels-photo-3861963.jpeg",
+    "contact": "+3333737373"
+  },
+  {
+    "title": "Online Teacher",
+    "company": "Dugsiiye.com",
+    "location": "Online",
+    "description": "Barayaal online ah oo ku takhasusay luqadda Ingiriisiga iyo STEM.",
+    "image": "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg",
+    "contact": "+3333227248"
+  },
+  {
+    "title": "Video Editor",
+    "company": "Xidig Media",
+    "location": "Marka",
+    "description": "Khibrad ku filan Adobe Premiere iyo DaVinci Resolve ayaa loo baahan yahay.",
+    "image": "https://img.freepik.com/free-photo/african-american-man-video-editor-working-video-production-industry_482257-116368.jpg?ga=GA1.1.1374906113.1749048719&semt=ais_hybrid&w=740",
+    "contact": "+3337011768"
+  },
+  {
+    "title": "Network Engineer",
+    "company": "FiberNet Somalia",
+    "location": "Boosaaso",
+    "description": "Waayo-aragnimo ku saabsan network setup iyo troubleshooting.",
+    "image": "https://images.pexels.com/photos/4421524/pexels-photo-4421524.jpeg",
+    "contact": "+3335299910"
+  },
+  {
+    "title": "Sales Agent",
+    "company": "Somtel",
+    "location": "Beledwayne",
+    "description": "Khibrad iibka iyo xirfado isgaarsiineed oo wanaagsan ayaa loo baahan yahay.",
+    "image": "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg",
+    "contact": "+3333422964"
+  },
+  {
+    "title": "Digital Marketer",
+    "company": "Dugsiiye.com",
+    "location": "Online",
+    "description": "Khibrad SEO, Google Ads iyo suuqgeynta email-ka.",
+    "image": "https://images.pexels.com/photos/1559038/pexels-photo-1559038.jpeg",
+    "contact": "+3337780388"
+  },
+  {
+    "title": "Receptionist",
+    "company": "Dayax Hotel",
+    "location": "Afgooye",
+    "description": "Dad la dhaqanka iyo aqoon kooban oo xisaabeed ah ayaa muhiim ah.",
+    "image": "https://images.pexels.com/photos/8895298/pexels-photo-8895298.jpeg",
+    "contact": "+3331160674"
+  },
+  {
+    "title": "Agricultural Consultant",
+    "company": "AgroSom",
+    "location": "Marka",
+    "description": "Khibrad la xiriirta waxsoosaarka beeraha iyo la talinta beeraleyda.",
+    "image": "https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/1-harvest-panorama-robin-moline.jpg",
+    "contact": "+3331552465"
+  },
+  {
+    "title": "Legal Advisor",
+    "company": "SomLaw Firm",
+    "location": "Mogadishu",
+    "description": "Aqoonta sharciga, qoraalada rasmi ah iyo matalaadda sharci waa muhiim.",
+    "image": "https://images.pexels.com/photos/4427612/pexels-photo-4427612.jpeg",
+    "contact": "+3331635499"
+  }
+]
