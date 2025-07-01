@@ -5,3 +5,4 @@
 - 📂 [HTML Exercises](./html-exercises) — All practice for HTML layout and structure.
 - 📂 [CSS Exercises](./css-exercises) — All practice Styling and layout with CSS.
 - 📂 [JS Exercises](./js-exercises) — All practice for JS logic and interactivity.
+- 📂 [Tailwind CSS Exercises](./tailwind-css-exercises) — Practical tasks using utility-first Tailwind CSS.
