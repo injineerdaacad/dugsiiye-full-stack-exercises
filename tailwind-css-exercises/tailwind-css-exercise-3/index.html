@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Engineer Honest" />
+    <title>Grid Row</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="flex justify-center items-center min-h-screen bg-gray-100 p-6">
+
+    <div class="grid grid-cols-3 grid-rows-3 gap-6 text-white text-lg w-full font-bold">
+
+      <div class="bg-blue-600 col-span-2 row-span-2 rounded-xl p-12 shadow-md flex flex-col items-center justify-center text-center">
+        <h2 class="text-2xl mb-2">Feature Image</h2>
+        <p class="text-white">(Spans 2x2)</p>
+      </div>
+
+      <div class="bg-green-600 rounded-xl p-8 shadow-md flex items-center justify-center"> Image 2 </div>
+
+      <div class="bg-green-600 rounded-xl p-8 shadow-md flex items-center justify-center">Image 3</div>
+
+      <div class="bg-purple-600 rounded-xl p-8 shadow-md flex items-center justify-center">Image 4</div>
+
+      <div class="bg-purple-600 rounded-xl p-8 shadow-md flex items-center justify-center">Image 5</div>
+
+      <div class="bg-purple-600 rounded-xl p-8 shadow-md flex items-center justify-center">Image 6</div>
+
+    </div>
+  </body>
+</html>
