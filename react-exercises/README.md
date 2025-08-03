@@ -6,4 +6,6 @@ This repository contains a set of hands-on React exercises designed to help you 
 
 Each folder focuses on a specific React topic. Go through them in order to build a strong foundation:
 
-- 📁 [react-exercise-1](./react-exercise-1/) – Component with Default Export
+- 📁 [react-exercise-1](./react-exercise-1/) – Creating and Exporting Functional Components
+- 📁 [react-exercise-2](./react-exercise-2/) – Component Composition and Hierarchy
+- 📁 [react-exercise-3](./react-exercise-3/) – Props and PropTypes
