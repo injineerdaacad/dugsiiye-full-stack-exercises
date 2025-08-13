@@ -9,3 +9,5 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-1](./react-exercise-1/) – Creating and Exporting Functional Components
 - 📁 [react-exercise-2](./react-exercise-2/) – Component Composition and Hierarchy
 - 📁 [react-exercise-3](./react-exercise-3/) – Props and PropTypes
+- 📁 [react-exercise-4](./react-exercise-4/) – Managing State with the useState Hook
+- 📁 [react-exercise-5](./react-exercise-5/) – Managing State with Objects and Arrays
