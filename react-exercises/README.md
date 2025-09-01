@@ -13,3 +13,5 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-5](./react-exercise-5/) – Managing State with Objects and Arrays
 - 📁 [react-exercise-6](./react-exercise-6/) – React Component Lifecycle & The useEffect Hook Part A
 - 📁 [react-exercise-7](./react-exercise-7/) – React Component Lifecycle & The useEffect Hook Part B
+- 📁 [react-exercise-8](./react-exercise-8/) – React Component Lifecycle & The useEffect Hook Part C
+- 📁 [react-exercise-9](./react-exercise-9/) – Data Fetching with useEffect
