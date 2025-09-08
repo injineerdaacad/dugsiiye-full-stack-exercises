@@ -15,3 +15,6 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-7](./react-exercise-7/) – React Component Lifecycle & The useEffect Hook Part B
 - 📁 [react-exercise-8](./react-exercise-8/) – React Component Lifecycle & The useEffect Hook Part C
 - 📁 [react-exercise-9](./react-exercise-9/) – Data Fetching with useEffect
+- 📁 [react-exercise-10](./react-exercise-10/) – Rendering Lists and Understanding Keys
+- 📁 [react-exercise-11](./react-exercise-11/) – Conditional Rendering Techniques
+- 📁 [react-exercise-12](./react-exercise-12/) – Event Handling in React
