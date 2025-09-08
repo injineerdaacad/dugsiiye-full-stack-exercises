@@ -8,15 +8,13 @@ const LoginForm = () => {
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
-  }
+  };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   }
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-
+  const Login = () => {
     if (!username.trim() || !password.trim()) {
       setError("Username and password are required");
       return;
@@ -28,6 +26,11 @@ const LoginForm = () => {
     } else {
       setError("Invalid username or password");
     }
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    Login();
   }
 
   const handleLogout = () => {
