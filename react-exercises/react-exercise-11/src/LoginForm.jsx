@@ -15,8 +15,14 @@ const LoginForm = () => {
   }
 
   const handleLogin = (e) => {
-    e.preventDefault()
-    if (username === "honest" && password === "1234") {
+    e.preventDefault();
+
+    if (!username.trim() || !password.trim()) {
+      setError("Username and password are required");
+      return;
+    }
+
+    if (username.trim() === "honest" && password.trim() === "1234") {
       setIsLoggedIn(true);
       setError("");
     } else {
