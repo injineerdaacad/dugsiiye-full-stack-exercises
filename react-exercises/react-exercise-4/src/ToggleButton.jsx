@@ -3,14 +3,14 @@ import { useState } from "react";
 const ToggleButton = () => {
     const [isOn, setIsOn] = useState(true);
 
-    const toggleButton = () => {
+    const handleToggleButton = () => {
         setIsOn(!isOn);
     }
 
     return (
         <div>
             <p>The button is {isOn ? 'On' : 'Off'}</p>
-            <button onClick={toggleButton}>Turn {isOn ? 'Off' : 'On'}</button>
+            <button onClick={handleToggleButton}>Turn {isOn ? 'Off' : 'On'}</button>
         </div>
     )
 }

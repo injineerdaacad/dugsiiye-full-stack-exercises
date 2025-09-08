@@ -12,17 +12,17 @@ const CountdownTimer = () => {
     setTimeLeft(value);
   };
 
-  const start = () => {
+  const handleStart = () => {
     if (timeLeft > 0) {
       setIsRunning(true);
     }
   };
 
-  const stop = () => {
+  const handleStop = () => {
     setIsRunning(false);
   };
 
-  const reset = () => {
+  const handleReset = () => {
     setInitialTime("");
     setTimeLeft(0);
     setIsRunning(false);
@@ -59,9 +59,9 @@ const CountdownTimer = () => {
 
       <p>Time Left: {timeLeft} seconds</p>
 
-      <button onClick={start} disabled={isRunning || timeLeft === 0}> Start</button>
-      <button onClick={stop} disabled={!isRunning}> Stop</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick={handleStart} disabled={isRunning || timeLeft === 0}> Start</button>
+      <button onClick={handleStop} disabled={!isRunning}> Stop</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 };

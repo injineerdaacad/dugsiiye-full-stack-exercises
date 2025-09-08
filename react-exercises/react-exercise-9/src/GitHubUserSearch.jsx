@@ -6,13 +6,7 @@ const GitHubUserSearch = () => {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState("");
 
-  const handleInputChange = (e) => {
-    setSearchUsername(e.target.value);
-  };
-
-  const search = async (e) => {
-    e.preventDefault();
-
+  const search = async () => {
     const username = searchUsername.trim();
     if (!username) return;
 
@@ -40,11 +34,20 @@ const GitHubUserSearch = () => {
     }
   };
 
+  const handleInputChange = (e) => {
+    setSearchUsername(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    search();
+  };
+
   return (
     <div>
       <h2>GitHub User Search</h2>
 
-      <form onSubmit={search}>
+      <form onSubmit={handleSearch}>
         <input
           type="text"
           name="username"

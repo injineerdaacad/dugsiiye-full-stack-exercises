@@ -5,17 +5,6 @@ const ShoppingCart = () => {
   const [newProductPrice, setNewProductPrice] = useState("");
   const [cart, setCart] = useState([]);
 
-    
-  const handleNameChange = (e) => {
-    setNewProductName(e.target.value);
-  };
-
-    
-  const handlePriceChange = (e) => {
-    setNewProductPrice(e.target.value);
-  };
-
-    
   const addToCart = () => {
     const parsedPrice = parseFloat(newProductPrice);
 
@@ -69,6 +58,30 @@ const ShoppingCart = () => {
     );
   };
 
+  const handleNameChange = (e) => {
+    setNewProductName(e.target.value);
+  };
+
+  const handlePriceChange = (e) => {
+    setNewProductPrice(e.target.value);
+  };
+
+  const handleAddToCart = () => {
+    addToCart();
+  };
+
+  const handleRemoveFromCart = (id) => {
+    removeFromCart(id);
+  };
+
+  const handleIncreaseQuantity = (id) => {
+    increaseQuantity(id);
+  };
+
+  const handleDecreaseQuantity = (id) => {
+    decreaseQuantity(id);
+  };
+
   return (
     <div>
       <h1>Simple Shopping Cart</h1>
@@ -90,7 +103,7 @@ const ShoppingCart = () => {
           value={newProductPrice}
           onChange={handlePriceChange}
         />
-        <button onClick={addToCart}>Add to Cart</button>
+        <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
 
       <h3>Products in Cart</h3>
@@ -105,11 +118,11 @@ const ShoppingCart = () => {
               {(item.priceInCents / 100).toFixed(2)} USD
               <p>
                 Quantity:{" "}
-                <button onClick={() => decreaseQuantity(item.id)}>-</button>{" "}
+                <button onClick={() => handleDecreaseQuantity(item.id)}>-</button>{" "}
                 {item.quantity}{" "}
-                <button onClick={() => increaseQuantity(item.id)}>+</button>
+                <button onClick={() => handleIncreaseQuantity(item.id)}>+</button>
               </p>
-              <button onClick={() => removeFromCart(item.id)}>Remove</button>
+              <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
             </li>
           ))}
         </ul>
