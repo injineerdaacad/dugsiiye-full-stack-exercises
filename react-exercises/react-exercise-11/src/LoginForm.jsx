@@ -1,34 +1,34 @@
 import { useState } from "react"
 
 const LoginForm = () => {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [error, setError] = useState("")
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [error, setError] = useState("");
 
   const handleUsernameChange = (e) => {
-    setUsername(e.target.value)
+    setUsername(e.target.value);
   }
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value)
+    setPassword(e.target.value);
   }
 
   const handleLogin = (e) => {
     e.preventDefault()
     if (username === "honest" && password === "1234") {
-      setIsLoggedIn(true)
-      setError("")
+      setIsLoggedIn(true);
+      setError("");
     } else {
-      setError("Invalid username or password")
+      setError("Invalid username or password");
     }
   }
 
   const handleLogout = () => {
-    setIsLoggedIn(false)
-    setUsername("")
-    setPassword("")
-    setError("")
+    setIsLoggedIn(false);
+    setUsername("");
+    setPassword("");
+    setError("");
   }
 
   return (
