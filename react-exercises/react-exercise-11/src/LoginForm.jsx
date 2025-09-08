@@ -12,7 +12,7 @@ const LoginForm = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-  }
+  };
 
   const Login = () => {
     if (!username.trim() || !password.trim()) {
@@ -31,14 +31,14 @@ const LoginForm = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     Login();
-  }
+  };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setUsername("");
     setPassword("");
     setError("");
-  }
+  };
 
   return (
     <div>
