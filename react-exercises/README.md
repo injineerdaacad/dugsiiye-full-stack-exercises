@@ -18,3 +18,4 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-10](./react-exercise-10/) – Rendering Lists and Understanding Keys
 - 📁 [react-exercise-11](./react-exercise-11/) – Conditional Rendering Techniques
 - 📁 [react-exercise-12](./react-exercise-12/) – Event Handling in React
+- 📁 [react-exercise-13](./react-exercise-13/) – Managing Complex State with useReducer
