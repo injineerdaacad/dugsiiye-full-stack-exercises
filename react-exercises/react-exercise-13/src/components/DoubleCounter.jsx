@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { doubleCounterReducer, initialState } from "../reducers/doubleCounterReducer.js";
+import { doubleCounterReducer, initialState } from "../reducers/double-counter-reducer.js";
 
 const DoubleCounter = () => {
   const [state, dispatch] = useReducer(doubleCounterReducer, initialState);

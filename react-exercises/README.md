@@ -20,3 +20,5 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-12](./react-exercise-12/) – Event Handling in React
 - 📁 [react-exercise-13](./react-exercise-13/) – Managing Complex State with useReducer Part A
 - 📁 [react-exercise-14](./react-exercise-14/) – Managing Complex State with useReducer Part B
+- 📁 [react-exercise-15](./react-exercise-15/) – Using the useContext Hook for Global State Management Part A
+- 📁 [react-exercise-16](./react-exercise-16/) – Using the useContext Hook for Global State Management Part B

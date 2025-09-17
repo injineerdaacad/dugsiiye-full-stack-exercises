@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import { multiStepFormReducer, initialState } from "../reducers/multiStepFormReducer.js";
+import { multiStepFormReducer, initialState } from "../reducers/multi-step-form-reducer.js";
 
 const MultiStepForm = () => {
   const [state, dispatch] = useReducer(multiStepFormReducer, initialState);
