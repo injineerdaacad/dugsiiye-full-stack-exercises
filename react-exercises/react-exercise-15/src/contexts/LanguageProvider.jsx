@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LanguageContext from "./language-context.js";
+import LanguageContext from "./LanguageContext.js";
 
 const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("en");
