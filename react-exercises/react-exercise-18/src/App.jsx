@@ -1,11 +1,10 @@
-import ContactProvider from "./contexts/ContactContextProvider.jsx";
-import ContactsView from "./features/contacts/ContactsView.jsx";
+import ContactApp from "./features/contact/ContactApp.jsx";
 
 const App = () => {
   return (
-    <ContactProvider>
-      <ContactsView />
-    </ContactProvider>
+    <div>
+      <ContactApp />
+    </div>
   );
 };
 

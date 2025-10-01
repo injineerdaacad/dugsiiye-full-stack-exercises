@@ -1,4 +1,4 @@
-import { useContacts } from "../contexts/ContactContext.js";
+import { useContacts } from "../contexts/ContactContext.jsx";
 
 const SearchInput = () => {
   const { searchTerm, setSearchTerm } = useContacts();
@@ -9,7 +9,6 @@ const SearchInput = () => {
       placeholder="Search by name, email, or phone"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      style={{ width: "100%", marginBottom: "1rem" }}
     />
   );
 };

@@ -9,10 +9,7 @@ const useForm = (initialValues, onSubmit) => {
 
   const handleChange = (e) => {
     const { name, type, value, checked } = e.target;
-    setValues((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    setValues((prev) => ({...prev, [name]: type === "checkbox" ? checked : value}));
   };
 
   const handleSubmit = (e) => {
@@ -23,11 +20,11 @@ const useForm = (initialValues, onSubmit) => {
   const reset = () => setValues(initialValues);
 
   return {
-    values,
     handleChange,
     handleSubmit,
     reset,
     setValues,
+    values,
   };
 };
 
