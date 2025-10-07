@@ -1,4 +1,4 @@
-import { useContacts } from "../contexts/ContactContext.jsx";
+import { useContacts } from "../contexts/ContactContext.js";
 
 const ContactStats = () => {
   const { counts } = useContacts();

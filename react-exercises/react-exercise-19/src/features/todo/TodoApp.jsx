@@ -1,4 +1,4 @@
-import { TodoProvider } from "./contexts/TodoContext.jsx";
+import TodoProvider from "./providers/TodoProvider.jsx";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import TodoStats from "./components/TodoStats";

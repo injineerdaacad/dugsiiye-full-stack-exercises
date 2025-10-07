@@ -1,10 +1,13 @@
 import { useTodos } from "../contexts/TodoContext.js";
-import styles from './TodoStats.module.css';
 
 const TodoStats = () => {
   const { todos } = useTodos();
 
-  return <p className={styles.stats}>Total Tasks: {todos.length}</p>;
+  return (
+    <p className="text-sm text-gray-500 text-right mt-4">
+      Total Tasks: {todos.length}
+    </p>
+  );
 };
 
 export default TodoStats;

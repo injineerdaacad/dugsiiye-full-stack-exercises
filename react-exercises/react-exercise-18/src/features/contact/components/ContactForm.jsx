@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useContacts } from "../contexts/ContactContext.jsx";
+import { useContacts } from "../contexts/ContactContext.js";
 import useForm from "../hooks/useForm.js";
 
 const initialEmptyContact = { id: null, name: "", email: "", phone: "", favorite: false };

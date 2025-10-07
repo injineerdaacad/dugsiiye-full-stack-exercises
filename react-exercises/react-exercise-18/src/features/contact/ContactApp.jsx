@@ -1,4 +1,5 @@
-import { ContactProvider } from "./contexts/ContactContext.jsx";
+import ContactProvider from "./providers/ContactProvider.jsx";
+
 import ContactForm from "./components/ContactForm.jsx";
 import ContactList from "./components/ContactList.jsx";
 import ContactStats from "./components/ContactStats.jsx";

@@ -1,18 +1,19 @@
 import TodoItem from "./TodoItem.jsx";
 import { useTodos } from "../contexts/TodoContext.js";
-import styles from "./TodoList.module.css";
 
 const TodoList = () => {
   const { todos } = useTodos();
 
   if (todos.length === 0) {
     return (
-      <p className={styles.emptyMessage}>No todos yet! Add some new tasks.</p>
+      <p className="text-center text-gray-500 italic py-6">
+        No todos yet! Add some new tasks.
+      </p>
     );
   }
 
   return (
-    <ul className={styles.list}>
+    <ul className="space-y-4 bg-white p-5 rounded-xl shadow max-h-[500px] overflow-y-auto">
       {todos.map((todo) => (
         <TodoItem key={todo.id} todo={todo} />
       ))}

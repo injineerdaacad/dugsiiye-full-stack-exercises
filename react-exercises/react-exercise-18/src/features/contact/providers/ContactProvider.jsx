@@ -1,33 +1,39 @@
-import { createContext, useContext, useReducer, useState, useMemo, useCallback } from "react";
-import { contactReducer, initialState } from "./contactReducer.js";
+import { useState, useReducer, useCallback, useMemo } from "react";
+import { contactReducer, initialState } from "../contexts/contactReducer.js";
+import { ContactContext } from "../contexts/ContactContext.js";
 
-export const ContactContext = createContext();
-
-export const useContacts = () => useContext(ContactContext);
-
-export const ContactProvider = ({ children }) => {
+const ContactProvider = ({ children }) => {
   const [contacts, dispatch] = useReducer(contactReducer, initialState);
 
   const [editingContactId, setEditingContactId] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const addContact = useCallback(
-    (data) => dispatch({ type: "ADD_CONTACT", payload: data }), [dispatch]);
+    (data) => dispatch({ type: "ADD_CONTACT", payload: data }),
+    [dispatch]
+  );
 
   const editContact = useCallback(
     (data) => {
       dispatch({ type: "EDIT_CONTACT", payload: data });
       setEditingContactId(null);
-    }, [dispatch]
+    },
+    [dispatch]
   );
 
   const setEditingContact = useCallback((id) => {
     setEditingContactId(id);
   }, []);
 
-  const deleteContact = useCallback((id) => dispatch({ type: "DELETE_CONTACT", payload: id }), [dispatch]);
+  const deleteContact = useCallback(
+    (id) => dispatch({ type: "DELETE_CONTACT", payload: id }),
+    [dispatch]
+  );
 
-  const toggleFavorite = useCallback((id) => dispatch({ type: "TOGGLE_FAVORITE", payload: id }), [dispatch]);
+  const toggleFavorite = useCallback(
+    (id) => dispatch({ type: "TOGGLE_FAVORITE", payload: id }),
+    [dispatch]
+  );
 
   const updateSearchTerm = useCallback((term) => {
     setSearchTerm(term);
@@ -45,7 +51,10 @@ export const ContactProvider = ({ children }) => {
   }, [contacts, searchTerm]);
 
   const counts = useMemo(() => {
-    return {total: contacts.length, favorites: contacts.filter((c) => c.favorite).length};
+    return {
+      total: contacts.length,
+      favorites: contacts.filter((c) => c.favorite).length,
+    };
   }, [contacts]);
 
   const value = useMemo(
@@ -81,3 +90,5 @@ export const ContactProvider = ({ children }) => {
     <ContactContext.Provider value={value}>{children}</ContactContext.Provider>
   );
 };
+
+export default ContactProvider;

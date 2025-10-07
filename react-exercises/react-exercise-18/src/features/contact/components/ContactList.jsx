@@ -1,5 +1,5 @@
 import ContactItem from "./ContactItem.jsx";
-import { useContacts } from "../contexts/ContactContext.jsx";
+import { useContacts } from "../contexts/ContactContext.js";
 
 const ContactList = () => {
   const { contacts } = useContacts();

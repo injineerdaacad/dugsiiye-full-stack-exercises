@@ -1,11 +1,8 @@
-import { createContext, useContext, useReducer, useCallback, useMemo, useState } from "react";
-import { todoReducer, initialState } from "./todoReducer.js";
+import { useState, useReducer, useCallback, useMemo } from "react";
+import { TodoContext } from "../contexts/TodoContext.js";
+import { todoReducer, initialState } from "../contexts/todoReducer.js";
 
-export const TodoContext = createContext();
-
-export const useTodos = () => useContext(TodoContext);
-
-export const TodoProvider = ({ children }) => {
+const TodoProvider = ({ children }) => {
   const [todos, dispatch] = useReducer(todoReducer, initialState);
 
   const [editingTodoId, setEditingTodoId] = useState(null);
@@ -92,3 +89,5 @@ export const TodoProvider = ({ children }) => {
     <TodoContext.Provider value={contextValue}>{children}</TodoContext.Provider>
   );
 };
+
+export default TodoProvider;
