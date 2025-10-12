@@ -25,4 +25,5 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-17](./react-exercise-17/) – Creating a Custom Hook
 - 📁 [react-exercise-18](./react-exercise-18/) – Managing Complex State with useReducer and useContext Hook
 - 📁 [react-exercise-19](./react-exercise-19/) – CSS Modules for Scoped Styling
-- 📁 [react-exercise-19](./react-exercise-19/) – Tailwind CSS
+- 📁 [react-exercise-20](./react-exercise-20/) – Tailwind CSS
+- 📁 [react-exercise-21](./react-exercise-21/) – Modern Student Dashboard with React and Tailwind CSS
