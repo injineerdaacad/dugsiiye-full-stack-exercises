@@ -27,3 +27,4 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-19](./react-exercise-19/) – CSS Modules for Scoped Styling
 - 📁 [react-exercise-20](./react-exercise-20/) – Tailwind CSS
 - 📁 [react-exercise-21](./react-exercise-21/) – Modern Student Dashboard with React and Tailwind CSS
+- 📁 [react-exercise-22](./react-exercise-22/) – Managing Form State with Controlled Components
