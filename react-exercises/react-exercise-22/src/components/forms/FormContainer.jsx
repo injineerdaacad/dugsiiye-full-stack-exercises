@@ -4,24 +4,41 @@ import FormCheckbox from "./FormCheckbox";
 import FormSelect from "./FormSelect";
 import Button from "../ui/Button";
 import { initialFormData } from "../../utils/formUtils";
+import useFormValidation from "../../utils/useFormValidation";
 
 
 const FormContainer = () => {
   const [formData, setFormData] = useState(initialFormData);
-  const [submittedData, setSubmittedData] = useState(null);
+  const { errors, validateField, validateForm, setErrors, clearFieldError } = useFormValidation();
 
   const handleChange = (e) => {
     const { name, type, value, checked } = e.target;
+    const fieldValue = type === "checkbox" ? checked : value;
     setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: fieldValue,
     }));
+    if (!validateField(name, fieldValue)) clearFieldError(name);
+  };
+
+  const handleBlur = (e) => {
+    const { name, type, value, checked } = e.target;
+    const fieldValue = type === "checkbox" ? checked : value;
+    const msg = validateField(name, fieldValue);
+    if (msg) setErrors((prev) => ({ ...prev, [name]: msg }));
+    else clearFieldError(name);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmittedData(formData);
+    const validationErrors = validateForm(formData);
+    if (Object.keys(validationErrors).length) {
+      setErrors(validationErrors);
+      return;
+    }
+    console.log("Form submitted:", formData);
     setFormData(initialFormData);
+    setErrors({});
   };
 
   return (
@@ -45,8 +62,10 @@ const FormContainer = () => {
         name="username"
         value={formData.username}
         onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="Enter your username"
       />
+      {errors.username && <p className="text-red-600 text-sm mt-1">{errors.username}</p>}
 
       <FormInput
         label="Email *"
@@ -54,8 +73,10 @@ const FormContainer = () => {
         name="email"
         value={formData.email}
         onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="Enter your email"
       />
+      {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
 
       <FormInput
         label="Password *"
@@ -63,8 +84,10 @@ const FormContainer = () => {
         name="password"
         value={formData.password}
         onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="Enter your password"
         />
+      {errors.password && <p className="text-red-600 text-sm mt-1">{errors.password}</p>}
               
       <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
         <p className="text-sm text-blue-700">
@@ -77,66 +100,25 @@ const FormContainer = () => {
         name="country"
         value={formData.country}
         onChange={handleChange}
+        onBlur={handleBlur}
         options={[
           { label: "Somalia", value: "som" },
           { label: "Saudi Arabia", value: "sa" },
         ]}
       />
+      {errors.country && <p className="text-red-600 text-sm mt-1">{errors.country}</p>}
 
       <FormCheckbox
         label="I agree to the terms and conditions *"
         name="terms"
         checked={formData.terms}
         onChange={handleChange}
+        onBlur={handleBlur}
       />
+      {errors.terms && <p className="text-red-600 text-sm mt-1">{errors.terms}</p>}
 
       <Button type="submit">Submit Form</Button>
       </form>
-
-      {submittedData && (
-              <div className="mt-8 bg-gradient-to-br from-green-50 to-blue-50 shadow-xl rounded-2xl p-6 border border-green-200">
-                  
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-2">Submitted Data</h3>        
-            <div className="w-12 h-1 bg-green-500 mx-auto rounded-full"></div>
-          </div>
-                  
-          <div className="space-y-3 text-sm bg-white rounded-lg p-4 shadow-sm">
-            <div className="flex justify-between items-center py-2 border-b border-gray-100">
-              <span className="font-semibold text-gray-700">Username:</span>
-              <span className="text-gray-900 font-medium">{submittedData.username}</span>
-            </div>
-                      
-            <div className="flex justify-between items-center py-2 border-b border-gray-100">
-              <span className="font-semibold text-gray-700">Email:</span>
-              <span className="text-gray-900 font-medium">{submittedData.email}</span>
-            </div>
-                      
-            <div className="flex justify-between items-center py-2 border-b border-gray-100">
-              <span className="font-semibold text-gray-700">Password:</span>
-              <span className="text-gray-900 font-mono">{'•'.repeat(submittedData.password.length)}</span>
-            </div>
-                      
-            <div className="flex justify-between items-center py-2 border-b border-gray-100">
-              <span className="font-semibold text-gray-700">Country:</span>
-              <span className="text-gray-900 font-medium">{submittedData.country}</span>
-            </div>
-                      
-            <div className="flex justify-between items-center py-2">
-              <span className="font-semibold text-gray-700">Terms:</span>
-              <span className={`px-2 py-1 rounded-full text-xs font-medium ${submittedData.terms ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-                {submittedData.terms ? 'Yes' : 'No'}
-              </span>
-            </div>
-          </div>
-          <Button
-            onClick={() => setSubmittedData(null)}
-            variant="secondary"
-          >
-            New Form
-          </Button>
-        </div>
-      )}
     </div>
   );
 };

@@ -28,3 +28,5 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-20](./react-exercise-20/) – Tailwind CSS
 - 📁 [react-exercise-21](./react-exercise-21/) – Modern Student Dashboard with React and Tailwind CSS
 - 📁 [react-exercise-22](./react-exercise-22/) – Managing Form State with Controlled Components
+- 📁 [react-exercise-23](./react-exercise-23/) – Handling Multiple Inputs and Form Validation
+- 📁 [react-exercise-24](./react-exercise-24/) – Using React Hook Form for Efficient Form Handling
