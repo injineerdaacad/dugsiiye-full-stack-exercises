@@ -31,3 +31,4 @@ Each folder focuses on a specific React topic. Go through them in order to build
 - 📁 [react-exercise-23](./react-exercise-23/) – Handling Multiple Inputs and Form Validation
 - 📁 [react-exercise-24](./react-exercise-24/) – Using React Hook Form for Efficient Form Handling
 - 📁 [react-exercise-25](./react-exercise-25/) – Using React Router and Their Hooks
+- 📁 [react-exercise-26](./react-exercise-26/) – Using React Protected Routers
