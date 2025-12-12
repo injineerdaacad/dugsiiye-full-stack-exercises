@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faRoute } from '@fortawesome/free-solid-svg-icons'
-import { Button } from '../../components/Button'
+ import { faRoute } from '@fortawesome/free-solid-svg-icons'
 import { Card } from '../../components/Card'
 import { useAuth } from '../../context/AuthContext'
 import { getDashboardPath } from '../../utils/navigation'
@@ -50,33 +49,47 @@ export default function HomePage() {
  }
  }
 
- const handleSearch = async (e) => {
- e.preventDefault()
- if (!fromCity.trim() || !toCity.trim()) {
- showToast('Please select both departure and destination cities', 'warning')
+ const performSearch = async (fromInput, toInput) => {
+ const from = fromInput.trim()
+ const to = toInput.trim()
+ if (!from || !to) {
+ setSearchResults([])
  return
  }
 
  setIsSearching(true)
  try {
- const fromCityData = cities.find(
- (c) => c.name.toLowerCase() === fromCity.toLowerCase()
- )
- const toCityData = cities.find(
- (c) => c.name.toLowerCase() === toCity.toLowerCase()
- )
+ const fromLower = from.toLowerCase()
+ const toLower = to.toLowerCase()
+
+ const fromCityData =
+ cities.find((c) => c.name.toLowerCase() === fromLower) ||
+ cities.find((c) => c.name.toLowerCase().startsWith(fromLower))
+ const toCityData =
+ cities.find((c) => c.name.toLowerCase() === toLower) ||
+ cities.find((c) => c.name.toLowerCase().startsWith(toLower))
 
  let results = []
-
  if (fromCityData && toCityData) {
  results = await searchRoutes(fromCityData.id, toCityData.id)
  } else {
- results = await searchRoutesByCityNames(fromCity, toCity)
+ results = await searchRoutesByCityNames(from, to)
+ }
+
+ if (!results || results.length === 0) {
+ const clientResults = (activeRoutes || []).filter((route) => {
+ const fromName = route.cities_from?.name || route.from_city_name || ''
+ const toName = route.cities_to?.name || route.to_city_name || ''
+ return (
+ fromName.toLowerCase().includes(fromLower) &&
+ toName.toLowerCase().includes(toLower)
+ )
+ })
+ results = clientResults
  }
 
  setSearchResults(results || [])
- 
- if (results.length === 0) {
+ if (!results || results.length === 0) {
  showToast('No routes found for the selected cities', 'info')
  }
  } catch (error) {
@@ -87,6 +100,19 @@ export default function HomePage() {
  setIsSearching(false)
  }
  }
+
+ const debounceRef = useRef(null)
+ useEffect(() => {
+ if (debounceRef.current) clearTimeout(debounceRef.current)
+ debounceRef.current = setTimeout(() => {
+ if (fromCity.trim() && toCity.trim()) {
+ performSearch(fromCity, toCity)
+ }
+ }, 300)
+ return () => {
+ if (debounceRef.current) clearTimeout(debounceRef.current)
+ }
+ }, [fromCity, toCity, cities, activeRoutes])
 
  return (
  <div className="min-h-screen bg-gradient-to-br from-sky-50 to-emerald-50">
@@ -112,8 +138,11 @@ export default function HomePage() {
  >
  Sign In
  </Link>
- <Link to="/auth/register">
- <Button size="sm">Sign Up</Button>
+ <Link
+ to="/auth/register"
+ className="text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 px-3 py-1.5 rounded"
+ >
+ Sign Up
  </Link>
  </>
  )}
@@ -136,7 +165,7 @@ export default function HomePage() {
 
  
  <Card className="p-6 mb-8">
- <form onSubmit={handleSearch} className="space-y-4">
+ <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
  <div>
  <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -165,14 +194,6 @@ export default function HomePage() {
  />
  </div>
  </div>
- <Button
- type="submit"
- className="w-full md:w-auto"
- loading={isSearching}
- >
- <FontAwesomeIcon icon={faSearch} className="mr-2" />
- Search Routes
- </Button>
  </form>
  </Card>
  
@@ -233,4 +254,3 @@ export default function HomePage() {
  </div>
  )
 }
-
