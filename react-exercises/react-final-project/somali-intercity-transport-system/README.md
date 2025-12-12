@@ -25,3 +25,7 @@ A full-stack web application for managing intercity transport bookings, routes, 
 npm install
 npm run dev
 ```
+
+## Deployment
+
+- Live: https://sits-sandy.vercel.app/
