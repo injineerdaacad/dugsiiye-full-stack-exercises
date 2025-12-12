@@ -125,11 +125,72 @@ export function isValidEmail(email) {
 }
 
 export function isValidPhone(phone) {
- if (!phone) return false
+  if (!phone) return false
+  const cleaned = phone.replace(/[\s\-+]/g, '')
+  return /^\d{7,15}$/.test(cleaned)
+}
 
- const cleaned = phone.replace(/[\s\-+]/g, '')
+export function formatWeekdayDateTime(departureTimeStr, departureDateStr) {
+	if (!departureTimeStr || !departureDateStr) return ''
+	try {
+		const [year, month, day] = departureDateStr.split('-').map((v) => parseInt(v, 10))
+		const [h, m, s] = departureTimeStr.split(':').map((v) => parseInt(v || '0', 10))
+		const dt = new Date(year, (month - 1), day, h, m, s || 0)
 
- return /^\d{7,15}$/.test(cleaned)
+		const weekdays = ['Axad', 'Isniin', 'Talaado', 'Arbaco', 'Khamiis', 'Jumco', 'Sabti']
+		const weekday = weekdays[dt.getDay()] || ''
+
+		const dd = String(dt.getDate()).padStart(2, '0')
+		const mm = String(dt.getMonth() + 1).padStart(2, '0')
+		const yyyy = dt.getFullYear()
+		const dateStr = `${dd}-${mm}-${yyyy}`
+
+		const time12 = formatTime12Hour(`${String(dt.getHours()).padStart(2, '0')}:${String(dt.getMinutes()).padStart(2, '0')}`)
+
+		return `${weekday}\n${dateStr}\n${time12}`
+	} catch {
+		return `${departureDateStr}\n${departureTimeStr}`
+	}
+}
+
+export function formatWeekdayDateTimeFromTimestamp(ts) {
+	if (!ts) return ''
+	try {
+		const dt = new Date(ts)
+		const weekdays = ['Axad', 'Isniin', 'Talaado', 'Arbaco', 'Khamiis', 'Jumco', 'Sabti']
+		const weekday = weekdays[dt.getDay()] || ''
+
+		const dd = String(dt.getDate()).padStart(2, '0')
+		const mm = String(dt.getMonth() + 1).padStart(2, '0')
+		const yyyy = dt.getFullYear()
+		const dateStr = `${dd}-${mm}-${yyyy}`
+
+		const time12 = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+		return `${weekday}\n${dateStr}\n${time12}`
+	} catch {
+		return String(ts)
+	}
+}
+
+export function formatWeekdayDateTimeFromTimestampEn(ts) {
+  if (!ts) return ''
+  try {
+    const dt = new Date(ts)
+    const weekdaysEn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const weekday = weekdaysEn[dt.getDay()] || ''
+
+    const dd = String(dt.getDate()).padStart(2, '0')
+    const mm = String(dt.getMonth() + 1).padStart(2, '0')
+    const yyyy = dt.getFullYear()
+    const dateStr = `${dd}-${mm}-${yyyy}`
+
+    const time12 = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+    return `${weekday}\n${dateStr}\n${time12}`
+  } catch {
+    return String(ts)
+  }
 }
 
 export function formatPhone(phone) {
@@ -141,6 +202,33 @@ export function formatPhone(phone) {
  return `+252 ${cleaned.slice(-9, -7)} ${cleaned.slice(-7, -4)} ${cleaned.slice(-4)}`
  }
  return phone
+}
+
+export function formatDayDateEn(ts) {
+	if (!ts) return 'N/A'
+	try {
+		const dt = new Date(ts)
+		const weekdaysEn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+		const weekday = weekdaysEn[dt.getDay()] || ''
+		const dd = String(dt.getDate()).padStart(2, '0')
+		const mm = String(dt.getMonth() + 1).padStart(2, '0')
+		const yyyy = dt.getFullYear()
+		return `${weekday} ${dd}-${mm}-${yyyy}`
+	} catch {
+		return String(ts)
+	}
+}
+
+export function formatDayDateTimeEn(ts) {
+	if (!ts) return 'N/A'
+	try {
+		const dt = new Date(ts)
+		const dateStr = formatDayDateEn(dt)
+		const time12 = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+		return `${dateStr} ${time12}`
+	} catch {
+		return String(ts)
+	}
 }
 
 export function getInitials(firstName, lastName, middleName = '') {
@@ -217,4 +305,3 @@ export function addDays(date, days) {
  result.setDate(result.getDate() + days)
  return result
 }
-

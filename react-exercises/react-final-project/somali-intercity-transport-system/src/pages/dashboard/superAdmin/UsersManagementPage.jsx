@@ -13,6 +13,7 @@ import { useToast } from '../../../hooks/useToast'
 import { ROLE_TYPE, ROLE_LABELS } from '../../../utils/enums'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsers, faEdit, faUserShield, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { formatDayDateTimeEn } from '../../../utils/helpers'
 
 export default function UsersManagementPage() {
  const [users, setUsers] = useState([])
@@ -192,9 +193,9 @@ export default function UsersManagementPage() {
  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
  Phone
  </th>
- <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
- Actions
- </th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Created</th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Updated</th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Actions</th>
  </tr>
  </thead>
  <tbody>
@@ -240,9 +241,9 @@ export default function UsersManagementPage() {
  <td className="py-3 px-4 text-gray-600">
  {user.station_id ? 'Assigned' : 'Not assigned'}
  </td>
- <td className="py-3 px-4 text-gray-600">
- {user.phone || 'N/A'}
- </td>
+ <td className="py-3 px-4 text-gray-600">{user.phone || 'N/A'}</td>
+ <td className="py-3 px-4 text-gray-600 text-xs">{formatDayDateTimeEn(user.created_at)}</td>
+ <td className="py-3 px-4 text-gray-600 text-xs">{formatDayDateTimeEn(user.updated_at)}</td>
  <td className="py-3 px-4">
  <div className="flex gap-2">
  <Button
@@ -548,4 +549,3 @@ export default function UsersManagementPage() {
  </DashboardLayout>
  )
 }
-

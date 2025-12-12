@@ -11,7 +11,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { Card } from './Card'
 import { Badge } from './Badge'
 import { Button } from './Button'
-import { formatDate, formatTime, formatCurrency } from '../utils/helpers'
+import { formatDate, formatTime, formatCurrency, formatWeekdayDateTimeFromTimestampEn } from '../utils/helpers'
 import { ServiceTypeLabels } from '../utils/enums'
 import { useAuth } from '../context/AuthContext'
 
@@ -53,15 +53,24 @@ export default function RouteCard({ route }) {
  </div>
 
  <div className="space-y-2 text-sm">
- <div className="flex items-center gap-2 text-gray-700">
+ <div className="flex items-start gap-2 text-gray-700">
  <FontAwesomeIcon
  icon={faClock}
- className="text-sky-600 w-4"
+ className="text-sky-600 w-4 mt-0.5"
  />
- <span>
- {formatDate(route.departure_time)} at{' '}
- {formatTime(route.departure_time)}
- </span>
+ <div className="leading-tight">
+ {(() => {
+   const parts = (formatWeekdayDateTimeFromTimestampEn(route.departure_time) || '').split('\n')
+   const [weekday, dateStr, timeStr] = parts
+   return (
+     <>
+       <div className="font-medium">{weekday || formatDate(route.departure_time, 'DD-MM-YYYY')}</div>
+       <div>{dateStr || formatDate(route.departure_time, 'DD-MM-YYYY')}</div>
+       <div>{timeStr || formatTime(route.departure_time)}</div>
+     </>
+   )
+ })()}
+ </div>
  </div>
 
  {route.departure_place && (
@@ -128,13 +137,28 @@ export default function RouteCard({ route }) {
  )}
  </div>
 
- <Button 
-   variant="primary" 
-   size="sm"
-   onClick={handleBookNow}
- >
- Book Now
- </Button>
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
+   <Button 
+     variant="primary" 
+     size="sm"
+     onClick={handleBookNow}
+   >
+     Book Passenger
+   </Button>
+   <Button 
+     variant="secondary" 
+     size="sm"
+     onClick={() => {
+       if (!isLoggedIn) {
+         navigate('/auth/login')
+       } else {
+         navigate(`/dashboard/user/cargo-bookings?routeId=${route.id}`)
+       }
+     }}
+   >
+     Book Cargo
+   </Button>
+ </div>
  </div>
  </div>
 
@@ -148,4 +172,3 @@ export default function RouteCard({ route }) {
  </Card>
  )
 }
-

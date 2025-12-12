@@ -12,7 +12,7 @@ import {
 } from '../../../lib/api/cargoBookingsApi'
 import { useToast } from '../../../hooks/useToast'
 import { CARGO_STATUS, STATUS_COLORS } from '../../../utils/enums'
-import { formatDate, formatTime } from '../../../utils/helpers'
+import { formatDayDateTimeEn } from '../../../utils/helpers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBox, faCheck, faTimes, faTruck } from '@fortawesome/free-solid-svg-icons'
 
@@ -112,9 +112,9 @@ export default function CargoBookingsPage() {
  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
  Receiver
  </th>
- <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
- Route
- </th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Route</th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Created</th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Updated</th>
  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
  Weight
  </th>
@@ -168,12 +168,11 @@ export default function CargoBookingsPage() {
  {booking.routes?.cities_from?.name || booking.routes?.from_city_name} →{' '}
  {booking.routes?.cities_to?.name || booking.routes?.to_city_name}
  </div>
- <div className="text-xs text-gray-500">
- {formatDate(booking.routes?.departure_time)} at{' '}
- {formatTime(booking.routes?.departure_time)}
- </div>
+		<div className="text-xs text-gray-500">{formatDayDateTimeEn(booking.routes?.departure_time)}</div>
  </div>
  </td>
+ <td className="py-3 px-4 text-xs text-gray-600">{booking.created_at ? formatDayDateTimeEn(booking.created_at) : '—'}</td>
+ <td className="py-3 px-4 text-xs text-gray-600">{booking.updated_at ? formatDayDateTimeEn(booking.updated_at) : '—'}</td>
  <td className="py-3 px-4 text-gray-900">
  {booking.cargo_weight} kg
  </td>
@@ -245,4 +244,3 @@ export default function CargoBookingsPage() {
  </DashboardLayout>
  )
 }
-

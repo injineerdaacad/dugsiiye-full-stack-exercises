@@ -10,8 +10,8 @@ import { Select } from '../../../components/Select'
 import { TextArea } from '../../../components/TextArea'
 import { useAuth } from '../../../context/AuthContext'
 import {
- getRoutes,
- getRoutesByStation,
+ getRoutesAdmin,
+ getRoutesByStationAdmin,
  createRoute,
  updateRoute,
  deleteRoute,
@@ -20,7 +20,7 @@ import { getVehicles, getVehiclesByStation } from '../../../lib/api/vehiclesApi'
 import { getCities } from '../../../lib/api/citiesApi'
 import { getStations } from '../../../lib/api/stationsApi'
 import { useToast } from '../../../hooks/useToast'
-import { formatDate, formatTime, formatTime12Hour } from '../../../utils/helpers'
+import { formatDate, formatTime, formatTime12Hour, formatWeekdayDateTimeFromTimestampEn } from '../../../utils/helpers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRoute, faPlus, faEdit, faTrash, faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons'
 
@@ -38,6 +38,8 @@ export default function RoutesPage() {
  vehicle_id: '',
  from_city_id: '',
  to_city_id: '',
+	departure_at: '',
+	departure_date: '',
  departure_time: '',
  departure_place: '',
  departure_station_id: '',
@@ -61,7 +63,7 @@ export default function RoutesPage() {
  try {
  setIsLoading(true)
  const [routesData, vehiclesData, citiesData, stationsData] = await Promise.all([
- getRoutes(),
+			getRoutesAdmin(),
  getVehicles(),
  getCities(),
  getStations(),
@@ -80,7 +82,7 @@ export default function RoutesPage() {
  try {
  setIsLoading(true)
  const [routesData, vehiclesData, citiesData, stationsData] = await Promise.all([
- getRoutesByStation(profile.station_id),
+			getRoutesByStationAdmin(profile.station_id),
  getVehiclesByStation(profile.station_id),
  getCities(),
  getStations(),
@@ -122,16 +124,18 @@ export default function RoutesPage() {
  const matchingStation = stations.find(
  (station) => station.name === route.departure_place
  )
- let departureTimeInput = ''
- if (route.departure_time) {
- const today = new Date()
- const timeString = route.departure_time.substring(0, 5)
- const [hours, minutes] = timeString.split(':')
- today.setHours(parseInt(hours, 10))
- today.setMinutes(parseInt(minutes, 10))
- today.setSeconds(0)
- departureTimeInput = today.toISOString().slice(0, 16)
- }
+let departureTimeInput = ''
+if (route.departure_time) {
+  const d = new Date(route.departure_time)
+  if (!isNaN(d.getTime())) {
+    const yyyy = String(d.getFullYear())
+    const mm = String(d.getMonth() + 1).padStart(2, '0')
+    const dd = String(d.getDate()).padStart(2, '0')
+    const hh = String(d.getHours()).padStart(2, '0')
+    const min = String(d.getMinutes()).padStart(2, '0')
+    departureTimeInput = `${yyyy}-${mm}-${dd}T${hh}:${min}`
+  }
+}
  
  setFormData({
  vehicle_id: route.vehicle_id,
@@ -151,7 +155,7 @@ export default function RoutesPage() {
  }
 
  const handleSave = async () => {
- if (!formData.vehicle_id || !formData.from_city_id || !formData.to_city_id || !formData.departure_time || !formData.contact_phone) {
+	 if (!formData.vehicle_id || !formData.from_city_id || !formData.to_city_id || !formData.departure_time || !formData.contact_phone) {
  showToast('Please fill in all required fields', 'error')
  return
  }
@@ -162,6 +166,10 @@ export default function RoutesPage() {
  }
 
  try {
+	let departureTimeTs = formData.departure_time
+	if (departureTimeTs && departureTimeTs.includes('T')) {
+		departureTimeTs = `${departureTimeTs}:00`
+	}
  const fromCity = cities.find((c) => c.id === formData.from_city_id)
  const toCity = cities.find((c) => c.id === formData.to_city_id)
 
@@ -179,10 +187,11 @@ export default function RoutesPage() {
  }
  }
 
+
  const { departure_station_id, ...routeDataWithoutStationId } = formData
  const routeData = {
  ...routeDataWithoutStationId,
- departure_time: departureTime,
+	departure_time: departureTimeTs,
  from_city_name: fromCity?.name || '',
  to_city_name: toCity?.name || '',
  passenger_price: formData.passenger_price
@@ -334,8 +343,8 @@ export default function RoutesPage() {
  <div className="font-medium text-gray-900">
  {route.departure_place || 'N/A'}
  </div>
- <div className="text-xs">
- {formatTime12Hour(route.departure_time)}
+ <div className="text-xs whitespace-pre-line">
+ {formatWeekdayDateTimeFromTimestampEn(route.departure_time)}
  </div>
  </div>
  </td>
@@ -478,14 +487,12 @@ export default function RoutesPage() {
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
  <div className="min-w-0">
  <label className="block text-sm font-medium text-gray-700 mb-2">
- Departure Time <span className="text-red-500">*</span>
+ Departure Date & Time <span className="text-red-500">*</span>
  </label>
  <Input
  type="datetime-local"
  value={formData.departure_time}
- onChange={(e) =>
- setFormData({ ...formData, departure_time: e.target.value })
- }
+ onChange={(e) => setFormData({ ...formData, departure_time: e.target.value })}
  />
  </div>
 
@@ -659,4 +666,3 @@ export default function RoutesPage() {
  </DashboardLayout>
  )
 }
-

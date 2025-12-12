@@ -8,7 +8,7 @@ import { useAuth } from '../../../context/AuthContext'
 import { getPayments, getPaymentsByStation, updatePayment } from '../../../lib/api/paymentsApi'
 import { useToast } from '../../../hooks/useToast'
 import { PAYMENT_STATUS, PAYMENT_METHOD, STATUS_COLORS, PAYMENT_METHOD_LABELS } from '../../../utils/enums'
-import { formatDate } from '../../../utils/helpers'
+import { formatDayDateEn } from '../../../utils/helpers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCreditCard, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -163,7 +163,7 @@ export default function PaymentsPage() {
  className="border-b border-gray-200 hover:bg-gray-50"
  >
  <td className="py-3 px-4 text-gray-600">
- {formatDate(payment.created_at)}
+ {formatDayDateEn(payment.created_at)}
  </td>
  <td className="py-3 px-4">
  <span className="text-gray-900">
@@ -222,4 +222,3 @@ export default function PaymentsPage() {
  </DashboardLayout>
  )
 }
-

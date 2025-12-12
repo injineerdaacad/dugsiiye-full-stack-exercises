@@ -168,7 +168,19 @@ export default function CitiesPage() {
  </div>
  </td>
  <td className="py-3 px-4 text-gray-600">
- {new Date(city.created_at).toLocaleDateString()}
+ {/* English weekday + DD-MM-YYYY */}
+ {(() => {
+	 const dt = city.created_at
+	 try {
+		 const d = new Date(dt)
+		 const weekdays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+		 const day = weekdays[d.getDay()] || ''
+		 const dd = String(d.getDate()).padStart(2, '0')
+		 const mm = String(d.getMonth() + 1).padStart(2, '0')
+		 const yyyy = d.getFullYear()
+		 return `${day} ${dd}-${mm}-${yyyy}`
+	 } catch { return String(dt) }
+ })()}
  </td>
  <td className="py-3 px-4">
  <div className="flex gap-2">

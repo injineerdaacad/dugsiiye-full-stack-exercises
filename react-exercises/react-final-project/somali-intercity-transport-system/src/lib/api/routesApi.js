@@ -10,6 +10,16 @@ export async function getRoutes() {
  return data
 }
 
+export async function getRoutesAdmin() {
+	const { data, error } = await supabase
+	.from('routes')
+	.select('*, vehicles(*, stations(*, cities(*))), cities_from:cities!from_city_id(*), cities_to:cities!to_city_id(*)')
+	.order('departure_time', { ascending: true })
+
+	if (error) throw error
+	return data
+}
+
 export async function getActiveRoutes() {
  const { data, error } = await supabase
  .from('routes')
@@ -17,7 +27,6 @@ export async function getActiveRoutes() {
  *,
  vehicles(
  *,
- image_url,
  stations(*, cities(*))
  ),
  cities_from:cities!from_city_id(*),
@@ -101,6 +110,30 @@ export async function getRoutesByStation(stationId) {
  return data || []
 }
 
+export async function getRoutesByStationAdmin(stationId) {
+	const { data: vehicles, error: vehiclesError } = await supabase
+	.from('vehicles')
+	.select('id')
+	.eq('station_id', stationId)
+
+	if (vehiclesError) throw vehiclesError
+
+	if (!vehicles || vehicles.length === 0) {
+	return []
+	}
+
+	const vehicleIds = vehicles.map(v => v.id)
+
+	const { data, error } = await supabase
+	.from('routes')
+	.select('*, vehicles(*, stations(*, cities(*))), cities_from:cities!from_city_id(*), cities_to:cities!to_city_id(*)')
+	.in('vehicle_id', vehicleIds)
+	.order('departure_time', { ascending: true })
+
+	if (error) throw error
+	return data || []
+}
+
 export async function getRouteById(id) {
  const { data, error } = await supabase
  .from('routes')
@@ -140,4 +173,3 @@ export async function deleteRoute(id) {
 
  if (error) throw error
 }
-

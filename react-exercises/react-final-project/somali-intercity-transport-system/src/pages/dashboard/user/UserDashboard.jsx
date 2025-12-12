@@ -21,7 +21,7 @@ import { getActiveRoutes } from '../../../lib/api/routesApi'
 import { getCities } from '../../../lib/api/citiesApi'
 import { useToast } from '../../../hooks/useToast'
 import LoadingSpinner from '../../../components/LoadingSpinner'
-import { formatTime12Hour, formatCurrency } from '../../../utils/helpers'
+import { formatTime12Hour, formatCurrency, formatWeekdayDateTimeFromTimestampEn } from '../../../utils/helpers'
 import { ServiceTypeLabels } from '../../../utils/enums'
 import RouteCard from '../../../components/RouteCard'
 
@@ -63,6 +63,13 @@ export default function UserDashboard() {
 
  const filterRoutes = () => {
  let filtered = activeRoutes
+
+ const now = new Date()
+ filtered = filtered.filter((route) => {
+   if (!route?.departure_time) return false
+   const d = new Date(route.departure_time)
+   return !isNaN(d.getTime()) && d > now
+ })
 
  if (fromCity.trim()) {
  filtered = filtered.filter(
@@ -281,8 +288,8 @@ export default function UserDashboard() {
  icon={faClock}
  className="text-sky-600 w-4"
  />
- <span className="font-medium">
- {formatTime12Hour(route.departure_time)}
+ <span className="font-medium whitespace-pre-line">
+ {formatWeekdayDateTimeFromTimestampEn(route.departure_time)}
  </span>
  </div>
  {route.departure_place && (
@@ -406,26 +413,28 @@ export default function UserDashboard() {
  )}
 
  
- <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-200">
- {route.passenger_price && (
- <Button
- onClick={() => handleBookPassenger(route)}
- className="flex-1 md:flex-none"
- >
- <FontAwesomeIcon icon={faUser} className="mr-2" />
- Book Passenger
- </Button>
- )}
- {route.cargo_price_per_kg && (
- <Button
- onClick={() => handleBookCargo(route)}
- variant="secondary"
- className="flex-1 md:flex-none"
- >
- <FontAwesomeIcon icon={faBox} className="mr-2" />
- Book Cargo
- </Button>
- )}
+ <div className="pt-4 border-t border-gray-200">
+   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+     {route.passenger_price && (
+       <Button
+         onClick={() => handleBookPassenger(route)}
+         className="w-full"
+       >
+         <FontAwesomeIcon icon={faUser} className="mr-2" />
+         Book Passenger
+       </Button>
+     )}
+     {route.cargo_price_per_kg && (
+       <Button
+         onClick={() => handleBookCargo(route)}
+         variant="secondary"
+         className="w-full"
+       >
+         <FontAwesomeIcon icon={faBox} className="mr-2" />
+         Book Cargo
+       </Button>
+     )}
+   </div>
  </div>
  </div>
  </Card>

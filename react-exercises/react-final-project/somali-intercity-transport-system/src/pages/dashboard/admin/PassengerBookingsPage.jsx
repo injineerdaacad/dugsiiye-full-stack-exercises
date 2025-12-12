@@ -12,7 +12,7 @@ import {
 } from '../../../lib/api/passengerBookingsApi'
 import { useToast } from '../../../hooks/useToast'
 import { PASSENGER_STATUS, STATUS_COLORS } from '../../../utils/enums'
-import { formatDate, formatTime } from '../../../utils/helpers'
+import { formatDate, formatTime, formatDayDateTimeEn } from '../../../utils/helpers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -113,6 +113,8 @@ export default function PassengerBookingsPage() {
  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
  Route
  </th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Created</th>
+ <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Updated</th>
  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">
  Seats
  </th>
@@ -157,12 +159,17 @@ export default function PassengerBookingsPage() {
  {booking.routes?.cities_from?.name || booking.routes?.from_city_name} →{' '}
  {booking.routes?.cities_to?.name || booking.routes?.to_city_name}
  </div>
- <div className="text-xs text-gray-500">
- {formatDate(booking.routes?.departure_time)} at{' '}
- {formatTime(booking.routes?.departure_time)}
- </div>
+		<div className="text-xs text-gray-500">
+			{formatDayDateTimeEn(booking.routes?.departure_time)}
+		</div>
  </div>
  </td>
+<td className="py-3 px-4 text-xs text-gray-600">
+	{booking.created_at ? formatDayDateTimeEn(booking.created_at) : '—'}
+</td>
+<td className="py-3 px-4 text-xs text-gray-600">
+	{booking.updated_at ? formatDayDateTimeEn(booking.updated_at) : '—'}
+</td>
  <td className="py-3 px-4 text-gray-900">
  {booking.seat_count}
  </td>
@@ -219,4 +226,3 @@ export default function PassengerBookingsPage() {
  </DashboardLayout>
  )
 }
-
