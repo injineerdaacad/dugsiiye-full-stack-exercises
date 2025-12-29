@@ -13,5 +13,8 @@ Each folder focuses on a specific database topic. Go through them in order to bu
 ## 🗄️ SQL (MySQL) Exercises
 
 - 📁 [sql-exercise-1](./sql-exercise-1/) – Search Smarter in SQL (SELECT, WHERE and LIKE)
-
 - 📁 [sql-exercise-2](./sql-exercise-2/) – Combining Conditions in SQL (AND, OR)
+- 📁 [sql-exercise-3](./sql-exercise-3/) – Sorting, Limiting, and Renaming Your Query Results
+- 📁 [sql-exercise-4](./sql-exercise-4/) – Aggregate Functions in SQL: COUNT, SUM, AVG, MAX, MIN
+- 📁 [sql-exercise-5](./sql-exercise-5/) – SQL Relationships & All JOIN Types (INNER, LEFT, RIGHT, OUTER)
+- 📁 [sql-exercise-6](./sql-exercise-6/) – Indexing for Performance

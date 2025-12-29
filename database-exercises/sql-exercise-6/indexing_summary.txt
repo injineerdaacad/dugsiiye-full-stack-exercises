@@ -1,0 +1,47 @@
+SUMMARY: WHAT CHANGED AND WHY?
+-------------------------------
+
+
+BEFORE USING INDEX
+------------------
+- MySQL performed a FULL TABLE SCAN.
+- All 1000 rows in the table were read one by one.
+- Query execution became slower as the data size increased.
+- EXPLAIN output showed:
+    type = ALL
+    key  = NULL
+
+This means MySQL had no shortcut and had to scan the entire table to find the matching row.
+
+
+AFTER ADDING INDEX
+------------------
+- MySQL used a B-Tree index on the searched column.
+- The database jumped directly to the required row.
+- Only 1 row was examined instead of 1000.
+- EXPLAIN output showed:
+    type = ref
+    key  = idx_users_email
+
+This resulted in a much faster query execution and better performance.
+
+
+WHY THIS HAPPENED?
+-----------------
+An INDEX works like the index of a book:
+
+- Without an index:
+  You must read every page to find a topic.
+
+- With an index:
+  You go directly to the correct page number.
+
+Indexes allow MySQL to avoid unnecessary row scans and significantly improve SELECT query performance, especially on large tables.
+
+
+KEY TAKEAWAY
+-----------
+Indexes greatly improve read performance (SELECT), but they should be used carefully because they add overhead to INSERT, UPDATE, and DELETE operations.
+
+
+THANS ALL TEAM DUGSIIYE
