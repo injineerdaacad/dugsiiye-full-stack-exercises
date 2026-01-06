@@ -1,0 +1,5 @@
+// 5. Delete one student
+
+use("honest");
+
+db.students.deleteOne({ name: "Yusuf" });

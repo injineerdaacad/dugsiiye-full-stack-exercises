@@ -1,0 +1,5 @@
+// 3. Use find() to view the data
+
+use("honest");
+
+db.students.find();

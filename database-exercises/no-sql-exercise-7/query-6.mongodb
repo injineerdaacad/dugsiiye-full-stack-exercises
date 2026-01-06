@@ -1,0 +1,15 @@
+// 5. Insert a student with a nested address object
+
+use("honest");
+
+db.students.insertOne({
+  name: "Zainab",
+  age: 35,
+  email: "zainab@example.com",
+  courses: ["MongoDB", "Node.js"],
+  address: {
+    country: "Somalia",
+    city: "Mogadishu",
+    district: "Hodan"
+  },
+});

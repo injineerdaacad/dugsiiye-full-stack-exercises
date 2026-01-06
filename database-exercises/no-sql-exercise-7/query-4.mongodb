@@ -1,0 +1,8 @@
+// 4. Update a student’s email
+
+use("honest");
+
+db.students.updateOne(
+  { name: "Mohamed" },
+  { $set: { email: "honest@example.com" } }
+);

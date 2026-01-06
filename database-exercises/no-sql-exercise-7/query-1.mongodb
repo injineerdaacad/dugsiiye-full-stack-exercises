@@ -1,0 +1,5 @@
+// 1. Create a students collection in a dugsiiye DB
+
+use ("honest");
+
+db.createCollection("students");

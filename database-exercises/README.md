@@ -18,3 +18,4 @@ Each folder focuses on a specific database topic. Go through them in order to bu
 - 📁 [sql-exercise-4](./sql-exercise-4/) – Aggregate Functions in SQL: COUNT, SUM, AVG, MAX, MIN
 - 📁 [sql-exercise-5](./sql-exercise-5/) – SQL Relationships & All JOIN Types (INNER, LEFT, RIGHT, OUTER)
 - 📁 [sql-exercise-6](./sql-exercise-6/) – Indexing for Performance
+- 📁 [no-sql-exercise-7](./no-sql-exercise-7/) – Documents and Collections
