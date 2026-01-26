@@ -1,0 +1,12 @@
+// 6. BONUS: Update one student with $set, $inc, and $push together
+
+use("honest");
+
+db.students.updateOne(
+  { name: "Mohamed" },
+  {
+    $set: { email: "mohamed.pro@gmail.com" },
+    $inc: { points: 4 },
+    $push: { courses: "Next.js" },
+  },
+);

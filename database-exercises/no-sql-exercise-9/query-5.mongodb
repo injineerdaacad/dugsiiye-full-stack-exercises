@@ -1,0 +1,5 @@
+// 5. Use $pull to remove a course
+
+use("honest");
+
+db.students.updateOne({ name: "Ahmed" }, { $pull: { courses: "React" } });

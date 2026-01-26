@@ -1,0 +1,24 @@
+// 1. 1. Insert 3 students with fields: - `name`, `email`, `points`, `courses` (array)
+
+use("honest");
+
+db.students.insertMany([
+  {
+    name: "Mohamed",
+    email: "mohamed@gmail.com",
+    points: 94,
+    courses: ["Node.js", "MongoDB"],
+  },
+  {
+    name: "Ahmed",
+    email: "ahmed@gmail.com",
+    points: 92,
+    courses: ["React", "Node.js"],
+  },
+  {
+    name: "Yusuf",
+    email: "yusuf@gmail.com",
+    points: 90,
+    courses: ["HTML", "CSS"],
+  },
+]);

@@ -1,0 +1,5 @@
+// 4. Use $push to add a new course
+
+use("honest");
+
+db.students.updateOne({ name: "Yusuf" }, { $push: { courses: "CSS" } });

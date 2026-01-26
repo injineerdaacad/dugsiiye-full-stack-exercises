@@ -1,0 +1,5 @@
+// 3. Use $inc to increase points
+
+use("honest");
+
+db.students.updateOne({ name: "Mohamed" }, { $inc: { points: 2 } });
