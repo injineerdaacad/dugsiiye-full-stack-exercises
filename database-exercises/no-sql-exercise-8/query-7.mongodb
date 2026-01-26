@@ -1,0 +1,5 @@
+// 7. Find students enrolled in React or Node.js
+
+use("honest");
+
+db.students.find({ $or: [ { courses: "React" }, { courses: "Node.js" } ] });

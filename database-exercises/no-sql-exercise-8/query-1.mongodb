@@ -1,0 +1,5 @@
+// 1. Find students older than 22
+
+use ("honest");
+
+db.students.find({ age: { $gt: 22 } });

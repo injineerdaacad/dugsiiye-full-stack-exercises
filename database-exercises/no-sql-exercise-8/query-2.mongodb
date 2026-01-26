@@ -1,0 +1,5 @@
+// 2. Find students enrolled in React
+
+use("honest");
+
+db.students.find({ courses: "React" });

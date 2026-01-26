@@ -1,0 +1,5 @@
+// 4. Find students whose age is either 18 or 21
+
+use("honest");
+
+db.students.find({ age: { $in: [18, 21] } });

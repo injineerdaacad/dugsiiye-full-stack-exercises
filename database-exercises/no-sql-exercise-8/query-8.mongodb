@@ -1,0 +1,5 @@
+// 8. BONUS: Use $regex to match names containing "x" or emails ending in .edu
+
+use("honest");
+
+db.students.find({ $or: [ { name: { $regex: /x/ } }, { email: { $regex: /\.edu$/ } } ] });

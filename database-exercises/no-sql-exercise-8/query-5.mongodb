@@ -1,0 +1,5 @@
+// 5. Find students who are NOT using Gmail
+
+use("honest");
+
+db.students.find({ email: { $not: /@gmail\.com$/ } });

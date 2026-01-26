@@ -1,0 +1,5 @@
+// 6. Find students enrolled in React and older than 20
+
+use("honest");
+
+db.students.find({ courses: "React", age: { $gt: 20 } });

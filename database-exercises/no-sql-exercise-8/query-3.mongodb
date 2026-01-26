@@ -1,0 +1,5 @@
+// 3. Find students whose name starts with 'S'
+
+use("honest");
+
+db.students.find({ name: { $regex: /^S/ } });
