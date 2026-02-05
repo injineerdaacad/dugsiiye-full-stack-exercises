@@ -1,0 +1,151 @@
+use("honest");
+
+db.students.insertMany([
+  {
+    name: "Student_1",
+    courses: [
+      { title: "Express", score: 78 },
+      { title: "React", score: 74 },
+      { title: "Node.js", score: 76 },
+    ],
+  },
+  {
+    name: "Student_2",
+    courses: [
+      { title: "Express", score: 74 },
+      { title: "TypeScript", score: 66 },
+    ],
+  },
+  {
+    name: "Student_3",
+    courses: [
+      { title: "Node.js", score: 100 },
+      { title: "TypeScript", score: 64 },
+    ],
+  },
+  {
+    name: "Student_4",
+    courses: [
+      { title: "Node.js", score: 94 },
+      { title: "TypeScript", score: 100 },
+    ],
+  },
+  {
+    name: "Student_5",
+    courses: [
+      { title: "React", score: 89 },
+      { title: "MongoDB", score: 94 },
+    ],
+  },
+  {
+    name: "Student_6",
+    courses: [
+      { title: "Express", score: 90 },
+      { title: "Node.js", score: 92 },
+      { title: "React", score: 86 },
+    ],
+  },
+  {
+    name: "Student_7",
+    courses: [
+      { title: "MongoDB", score: 100 },
+      { title: "Node.js", score: 88 },
+    ],
+  },
+  {
+    name: "Student_8",
+    courses: [
+      { title: "Express", score: 69 },
+      { title: "React", score: 65 },
+      { title: "MongoDB", score: 78 },
+    ],
+  },
+  {
+    name: "Student_9",
+    courses: [
+      { title: "React", score: 72 },
+      { title: "TypeScript", score: 93 },
+    ],
+  },
+  {
+    name: "Student_10",
+    courses: [
+      { title: "React", score: 96 },
+      { title: "TypeScript", score: 89 },
+    ],
+  },
+  {
+    name: "Student_11",
+    courses: [
+      { title: "MongoDB", score: 70 },
+      { title: "Express", score: 87 },
+    ],
+  },
+  {
+    name: "Student_12",
+    courses: [
+      { title: "Node.js", score: 99 },
+      { title: "TypeScript", score: 90 },
+      { title: "MongoDB", score: 74 },
+    ],
+  },
+  {
+    name: "Student_13",
+    courses: [
+      { title: "MongoDB", score: 91 },
+      { title: "Node.js", score: 91 },
+      { title: "Express", score: 89 },
+    ],
+  },
+  {
+    name: "Student_14",
+    courses: [
+      { title: "React", score: 97 },
+      { title: "Node.js", score: 96 },
+    ],
+  },
+  {
+    name: "Student_15",
+    courses: [
+      { title: "TypeScript", score: 61 },
+      { title: "React", score: 77 },
+    ],
+  },
+  {
+    name: "Student_16",
+    courses: [
+      { title: "MongoDB", score: 86 },
+      { title: "React", score: 98 },
+      { title: "Node.js", score: 80 },
+    ],
+  },
+  {
+    name: "Student_17",
+    courses: [
+      { title: "Node.js", score: 65 },
+      { title: "React", score: 71 },
+      { title: "Express", score: 76 },
+    ],
+  },
+  {
+    name: "Student_18",
+    courses: [
+      { title: "React", score: 67 },
+      { title: "MongoDB", score: 86 },
+    ],
+  },
+  {
+    name: "Student_19",
+    courses: [
+      { title: "Express", score: 75 },
+      { title: "Node.js", score: 64 },
+    ],
+  },
+  {
+    name: "Student_20",
+    courses: [
+      { title: "TypeScript", score: 99 },
+      { title: "MongoDB", score: 66 },
+    ],
+  },
+]);

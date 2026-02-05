@@ -21,3 +21,4 @@ Each folder focuses on a specific database topic. Go through them in order to bu
 - 📁 [no-sql-exercise-7](./no-sql-exercise-7/) – Documents and Collections
 - 📁 [no-sql-exercise-8](./no-sql-exercise-8/) – Querying & Filtering in MongoDB
 - 📁 [no-sql-exercise-9](./no-sql-exercise-9/) – Updating Documents in MongoDB: $set, $inc, $push, $pull
+- 📁 [no-sql-exercise-10](./no-sql-exercise-10/) – Aggregation Pipeline in MongoDB

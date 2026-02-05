@@ -1,0 +1,22 @@
+use("honest");
+
+db.students.aggregate([
+  { $unwind: "$courses" },
+  { $match: { "courses.score": { $gt: 85 } } },
+  {
+    $group: {
+      _id: "$courses.title",
+      totalHighScorers: { $sum: 1 },
+      avgScore: { $avg: "$courses.score" },
+    },
+  },
+  {
+    $project: {
+      course: "$_id",
+      totalHighScorers: 1,
+      avgScore: { $round: ["$avgScore", 1] },
+      _id: 0,
+    },
+  },
+  { $sort: { totalHighScorers: -1, avgScore: -1 } },
+]);

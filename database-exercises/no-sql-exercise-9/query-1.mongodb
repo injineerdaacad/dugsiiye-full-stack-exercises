@@ -1,4 +1,4 @@
-// 1. 1. Insert 3 students with fields: - `name`, `email`, `points`, `courses` (array)
+// 1. Insert 3 students with fields: - `name`, `email`, `points`, `courses` (array)
 
 use("honest");
 
