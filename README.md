@@ -8,3 +8,4 @@
 - 📂 [Tailwind CSS Exercises](./tailwind-css-exercises) — Practical tasks using utility-first Tailwind CSS.
 - 📂 [React Exercises](./react-exercises) — Practice building interactive UIs with React components and hooks.
 - 📂 [Database Exercises](./database-exercises) — Practice working with databases using **SQL (MySQL)** and **NoSQL (MongoDB)**.
+- 📂 [Node JS Exercises](./node-js-exercises) — Practice working with Backend using **Node JS** and **Express**.
