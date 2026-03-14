@@ -6,4 +6,5 @@ This repository contains a set of Node.js and Express organized to help you prog
 
 Each folder focuses on a specific Node.js or Express concept. Go through them in order for the best results:
 
-- 📁 [node-js-exercise-1](./node-js-exercise-1/) – Node JS with Express In-Memory CRUD
+- 📁 [node-js-exercise-1](./node-js-exercise-1/) – Node JS with Express In-Memory CRUD Operations
+- 📁 [node-js-exercise-2](./node-js-exercise-2/) – Node JS with Express In Mongo DB CRUD Operations
