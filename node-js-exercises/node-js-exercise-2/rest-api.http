@@ -1,0 +1,39 @@
+
+@HOST = {{$dotenv HOST}}
+@PORT = {{$dotenv PORT}}
+
+
+### Create New Book
+POST http://{{HOST}}:{{PORT}}/books
+Content-Type: application/json  
+
+{
+  "title": "Node.js Architecture",
+  "author": "Eng. Honest"
+}
+
+
+### Get All Books
+GET http://{{HOST}}:{{PORT}}/books
+Content-Type: application/json
+
+
+### Get Single Book by ID
+GET http://{{HOST}}:{{PORT}}/books/69b4d6b05a9994b24bee31f1
+Content-Type: application/json 
+
+
+### Update Book
+PUT http://{{HOST}}:{{PORT}}/books/69b4d6b05a9994b24bee31f1
+Content-Type: application/json
+
+{
+  "publishedYear": 2026,
+  "genre": "Technology",
+  "pages": 350
+}
+
+
+### Delete Book
+DELETE http://{{HOST}}:{{PORT}}/books/69b4d6b05a9994b24bee31f1
+Content-Type: application/json
