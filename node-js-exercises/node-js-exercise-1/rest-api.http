@@ -1,23 +1,24 @@
-@BASE_URL = http://127.0.0.1:5000
+@HOST = {{$dotenv HOST}}
+@PORT = {{$dotenv PORT}}
 
 
 ### Home
-GET {{BASE_URL}}/
+GET http://{{HOST}}:{{PORT}}/
 Content-Type: application/json
 
 
 ### Get All Books
-GET {{BASE_URL}}/books
+GET http://{{HOST}}:{{PORT}}/books
 Content-Type: application/json
 
 
 ### Get Single Book by ID
-GET {{BASE_URL}}/books/1
+GET http://{{HOST}}:{{PORT}}/books/1
 Content-Type: application/json
 
 
 ### Add Book
-POST {{BASE_URL}}/books
+POST http://{{HOST}}:{{PORT}}/books
 Content-Type: application/json
 
 {
@@ -27,7 +28,7 @@ Content-Type: application/json
 
 
 ### Update Book
-PUT {{BASE_URL}}/books/1
+PUT http://{{HOST}}:{{PORT}}/books/1
 Content-Type: application/json
 
 {
@@ -36,5 +37,5 @@ Content-Type: application/json
 
 
 ### Delete Book
-DELETE {{BASE_URL}}/books/3
+DELETE http://{{HOST}}:{{PORT}}/books/3
 Content-Type: application/json

@@ -3,8 +3,6 @@ import express from 'express';
 const app = express();
 app.use(express.json());
 
-const PORT = 5000;
-
 let books = [
   { id: 1, title: 'Hablaheenna', author: 'Maxamed Xirsi Guuleed' },
   { id: 2, title: 'Ila Dabbaalo', author: 'Musa M. Isse' },
@@ -96,8 +94,11 @@ app.delete('/books/:id', (req, res) => {
   res.status(200).json({ message: 'Book deleted successfully' });
 });
 
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 5000;
 
 // Start the server
 app.listen(PORT, () => {
-  console.log('Server running on port ' + PORT);
+  console.log(`Server running in ${NODE_ENV} mode on port ${PORT} and URL: http://${HOST}:${PORT}`);
 });
