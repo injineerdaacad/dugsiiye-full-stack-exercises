@@ -5,11 +5,17 @@
 @BOOK_ID = replace-with-real-mongodb-id
 
 # Routes
+# /
 # /books/create
 # /books/all
 # /books/get/:id
 # /books/update/:id
 # /books/delete/:id
+
+
+### Dashboard
+GET {{BASE_URL}}/
+Content-Type: application/json
 
 
 ### Create New Book
