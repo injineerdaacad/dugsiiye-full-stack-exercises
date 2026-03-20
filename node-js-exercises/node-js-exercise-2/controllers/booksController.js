@@ -4,22 +4,15 @@ import Book from '../models/BookModel.js';
 // Add new book
 export const createBook = async (req, res) => {
     try {
-       
        const { title, author, publishedYear, genre, pages } = req.body;
+
        if (!title || !author) {
-        return res.status(400).json({ message: 'Title and author are required' });
+            return res.status(400).json({ message: 'Title and author are required' });
        }
 
-       const newBook = new Book({
-        title,
-        author,
-        publishedYear,
-        genre,
-        pages,
-       });
+        const savedBook = await Book.create({ title, author, publishedYear, genre, pages });
 
-       const savedBook = await newBook.save();
-       res.status(201).json({ message: 'Book added successfully', book: savedBook });
+        res.status(201).json({ message: 'Book added successfully', book: savedBook });
 
     } catch (error) {
         res.status(500).json({ message: 'Error adding book', error });
@@ -41,13 +34,11 @@ export const getAllBooks = async (req, res) => {
 // Get single book by ID
 export const getBook = async (req, res) => {
     try {
-
-        const id = req.params.id;
-
-        const book = await Book.findById(id);
+        const book = await Book.findById(req.params.id);
         if (!book) {
             return res.status(404).json({ message: 'Book not found' });
         }
+
         res.json({ message: 'Book fetched successfully', book });
 
     } catch (error) {
@@ -58,7 +49,6 @@ export const getBook = async (req, res) => {
 // Update book
 export const updateBook = async (req, res) => {
     try {
-
         const { title, author, publishedYear, genre, pages } = req.body;
 
         const book = await Book.findById(req.params.id);
@@ -66,13 +56,14 @@ export const updateBook = async (req, res) => {
             return res.status(404).json({ message: 'Book not found' });
         }
 
-        book.title = title || book.title;
-        book.author = author || book.author;
-        book.publishedYear = publishedYear || book.publishedYear;
-        book.genre = genre || book.genre;
-        book.pages = pages || book.pages;
+        book.title = title ?? book.title;
+        book.author = author ?? book.author;
+        book.publishedYear = publishedYear ?? book.publishedYear;
+        book.genre = genre ?? book.genre;
+        book.pages = pages ?? book.pages;
 
         const updatedBook = await book.save();
+
         res.json({ message: 'Book updated successfully', book: updatedBook });
 
     } catch (error) {
@@ -83,15 +74,13 @@ export const updateBook = async (req, res) => {
 // Delete book
 export const deleteBook = async (req, res) => {
     try {
-
-        const id = req.params.id;
-
-        const book = await Book.findById(id);
+        const book = await Book.findById(req.params.id);
         if (!book) {
             return res.status(404).json({ message: 'Book not found' });
         }
 
         await book.deleteOne();
+
         res.json({ message: 'Book deleted successfully' });
 
     } catch (error) {

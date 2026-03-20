@@ -1,10 +1,19 @@
 
 @HOST = {{$dotenv HOST}}
 @PORT = {{$dotenv PORT}}
+@BASE_URL = http://{{HOST}}:{{PORT}}
+@BOOK_ID = replace-with-real-mongodb-id
+
+# Routes
+# /books/create
+# /books/all
+# /books/get/:id
+# /books/update/:id
+# /books/delete/:id
 
 
 ### Create New Book
-POST http://{{HOST}}:{{PORT}}/books
+POST {{BASE_URL}}/books/create
 Content-Type: application/json  
 
 {
@@ -14,17 +23,17 @@ Content-Type: application/json
 
 
 ### Get All Books
-GET http://{{HOST}}:{{PORT}}/books
+GET {{BASE_URL}}/books/all
 Content-Type: application/json
 
 
 ### Get Single Book by ID
-GET http://{{HOST}}:{{PORT}}/books/69b4d6b05a9994b24bee31f1
+GET {{BASE_URL}}/books/get/{{BOOK_ID}}
 Content-Type: application/json 
 
 
 ### Update Book
-PUT http://{{HOST}}:{{PORT}}/books/69b4d6b05a9994b24bee31f1
+PUT {{BASE_URL}}/books/update/{{BOOK_ID}}
 Content-Type: application/json
 
 {
@@ -35,5 +44,5 @@ Content-Type: application/json
 
 
 ### Delete Book
-DELETE http://{{HOST}}:{{PORT}}/books/69b4d6b05a9994b24bee31f1
+DELETE {{BASE_URL}}/books/delete/{{BOOK_ID}}
 Content-Type: application/json
