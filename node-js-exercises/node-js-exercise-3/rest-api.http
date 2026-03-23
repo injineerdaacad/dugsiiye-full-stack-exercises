@@ -1,0 +1,48 @@
+@BASE_URL = http://localhost:5000
+@AUTH_TOKEN = {{login.response.body.$.token}}
+
+### Home
+GET {{BASE_URL}}/
+Content-Type: application/json
+
+
+### Sign Up
+POST {{BASE_URL}}/auth/sign-up
+Content-Type: application/json
+
+{
+  "name": "Eng Honest",
+  "email": "tijaabo@example.com",
+  "password": "123456"
+}
+
+
+### Login
+# @name login
+POST {{BASE_URL}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "tijaabo@example.com",
+  "password": "123456"
+}
+
+
+### Get Profile
+GET {{BASE_URL}}/auth/profile
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Logout
+POST {{BASE_URL}}/auth/logout
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Admin Dashboard Requires admin role
+GET {{BASE_URL}}/dashboard/admin
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### User Dashboard Requires user or admin role
+GET {{BASE_URL}}/dashboard/user
+Authorization: Bearer {{AUTH_TOKEN}}
