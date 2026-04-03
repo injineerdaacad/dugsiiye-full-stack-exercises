@@ -10,7 +10,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: process.env.BASE_URL || "http://localhost:5000",
+        url: "/",
+        description: "Current server",
       },
     ],
     components: {
