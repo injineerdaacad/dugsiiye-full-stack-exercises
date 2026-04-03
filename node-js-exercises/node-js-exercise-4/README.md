@@ -67,6 +67,11 @@ Production:
 npm start
 ```
 
+Live URLs:
+
+- API: `https://dugsiiye-full-stack-exercises-production.up.railway.app`
+- Docs: `https://dugsiiye-full-stack-exercises-production.up.railway.app/docs`
+
 ## Deploy (Railway, Render, or any PaaS)
 
 1. Push this project to GitHub.
@@ -96,9 +101,10 @@ Notes:
 
 ## API Documentation
 
-After server start, open:
+Open Swagger docs at:
 
 - `http://localhost:5000/docs`
+- `https://dugsiiye-full-stack-exercises-production.up.railway.app/docs`
 
 ## Seeding
 
@@ -108,18 +114,10 @@ Run all seed files:
 npm run seed
 ```
 
-Run only super admin seed:
-
-```bash
-npm run seed:admin
-```
-
 Seed behavior:
 
-- `NODE_ENV=production` loads values from `.env.production`
-- Any other environment loads values from `.env.development`
-- `npm run seed` now runs in production mode and uses `.env.production`
-- `npm run seed:admin` now runs in production mode and uses `.env.production`
+- `npm run seed` uses `.env.production`
+- `npm run seed-local` uses `.env.development`
 
 ## API Base Routes
 
