@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon server.js",
     "start": "NODE_ENV=production node server.js",
-    "seed": "node seeds/index.js",
-    "seed:admin": "node seeds/seed.super.admin.js"
+    "seed-local": "NODE_ENV=development node seeds/index.js",
+    "seed": "NODE_ENV=production node seeds/index.js"
   },
   "keywords": [],
   "author": "Eng. Mohamed Ahmed Yusuf (Eng. Honest)",

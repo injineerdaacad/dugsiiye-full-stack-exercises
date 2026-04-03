@@ -114,6 +114,13 @@ Run only super admin seed:
 npm run seed:admin
 ```
 
+Seed behavior:
+
+- `NODE_ENV=production` loads values from `.env.production`
+- Any other environment loads values from `.env.development`
+- `npm run seed` now runs in production mode and uses `.env.production`
+- `npm run seed:admin` now runs in production mode and uses `.env.production`
+
 ## API Base Routes
 
 - `/` - health check
