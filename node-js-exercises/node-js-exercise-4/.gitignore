@@ -1,0 +1,35 @@
+node_modules/
+
+.env
+.env.development
+.env.production
+.env.local
+.env.*.local
+!.env.example
+
+# Local upload files
+uploads/
+avatar.jpeg
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build and coverage
+dist/
+build/
+coverage/

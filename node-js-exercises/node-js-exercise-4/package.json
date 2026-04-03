@@ -1,0 +1,36 @@
+{
+  "name": "node-js-exercise-4",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
+    "seed": "node seeds/index.js",
+    "seed:admin": "node seeds/seed.super.admin.js"
+  },
+  "keywords": [],
+  "author": "Eng. Mohamed Ahmed Yusuf (Eng. Honest)",
+  "license": "ISC",
+  "description": "Personal Finance Tracker API with auth, transactions, uploads, security, and Swagger docs",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.1.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.3.6"
+  }
+}

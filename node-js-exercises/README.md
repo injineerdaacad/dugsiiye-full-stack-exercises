@@ -8,3 +8,6 @@ Each folder focuses on a specific Node.js or Express concept. Go through them in
 
 - 📁 [node-js-exercise-1](./node-js-exercise-1/) – Node JS with Express In-Memory CRUD Operations
 - 📁 [node-js-exercise-2](./node-js-exercise-2/) – Node JS with Express In Mongo DB CRUD Operations
+* 📁 [node-js-exercise-3](./node-js-exercise-3/) – Authentication and Authorization (JWT-based)
+- 📁 [node-js-exercise-4](./node-js-exercise-4/) – Personal Finance Tracker API
+

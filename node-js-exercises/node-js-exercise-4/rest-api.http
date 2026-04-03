@@ -1,0 +1,163 @@
+@BASE_URL = http://localhost:5000
+@AUTH_TOKEN = {{login.response.body.$.token}}
+@TRANSACTION_ID = TRANSACTION_ID_HERE
+@USER_ID = 69c0cfda4cb2116a060d8f3a
+
+### Home
+GET {{BASE_URL}}/
+Content-Type: application/json
+
+
+### Get Categories
+GET {{BASE_URL}}/categories
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Sign Up
+POST {{BASE_URL}}/auth/sign-up
+Content-Type: application/json
+
+{
+  "name": "Eng. Honest",
+  "email": "honest@example.com",
+  "password": "123456"
+}
+
+
+### Login
+# @name login
+POST {{BASE_URL}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "honest@example.com",
+  "password": "123456"
+}
+
+
+### Get Profile
+GET {{BASE_URL}}/auth/profile
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Logout
+POST {{BASE_URL}}/auth/logout
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Create Income Transaction
+POST {{BASE_URL}}/transactions
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json
+
+{
+  "title": "Monthly Salary",
+  "amount": 2500,
+  "type": "income",
+  "category": "Work",
+  "date": "2026-03-23"
+}
+
+
+### Create Expense Transaction
+POST {{BASE_URL}}/transactions
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json
+
+{
+  "title": "Shopping",
+  "amount": 30,
+  "type": "expense",
+  "category": "Food",
+  "date": "2026-03-23"
+}
+
+
+### Get Transactions
+GET {{BASE_URL}}/transactions
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Get Transaction By Id
+GET {{BASE_URL}}/transactions/{{TRANSACTION_ID}}
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Get Monthly Summary
+# Returns income first, then expense, with netIncome = totalIncome - totalExpense
+GET {{BASE_URL}}/transactions/monthly-summary?month=3&year=2026
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Update Transaction
+PUT {{BASE_URL}}/transactions/{{TRANSACTION_ID}}
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json
+
+{
+  "title": "Monthly Salary",
+  "amount": 2500,
+  "type": "income",
+  "category": "Work",
+  "date": "2026-03-23"
+}
+
+
+### Delete Transaction
+DELETE {{BASE_URL}}/transactions/{{TRANSACTION_ID}}
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### User Dashboard Requires user or admin role
+GET {{BASE_URL}}/dashboard/user
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Admin Dashboard Requires admin role
+GET {{BASE_URL}}/dashboard/admin
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Get Users Requires admin role
+GET {{BASE_URL}}/users
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Get User By Id Requires admin role
+GET {{BASE_URL}}/users/{{USER_ID}}
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Update User Requires admin role
+PUT {{BASE_URL}}/users/{{USER_ID}}
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json
+
+{
+  "name": "Eng. Honest",
+  "role": "user",
+  "isActive": true
+}
+
+
+### Delete User Requires admin role
+DELETE {{BASE_URL}}/users/{{USER_ID}}
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Admin Overview Requires admin role
+GET {{BASE_URL}}/admin/overview
+Authorization: Bearer {{AUTH_TOKEN}}
+
+
+### Upload Profile Picture
+POST {{BASE_URL}}/upload/profile-picture
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: multipart/form-data; boundary=ProfilePictureBoundary
+
+--ProfilePictureBoundary
+Content-Disposition: form-data; name="file"; filename="avatar.jpeg"
+Content-Type: image/jpeg
+
+< ./avatar.jpeg
+--ProfilePictureBoundary--
