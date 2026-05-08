@@ -8,8 +8,7 @@ const connectDB = async () => {
 
     await mongoose.connect(process.env.MONGO_URI);
 
-    const dbLabel = process.env.NODE_ENV === "production" ? "🌐 Atlas DB" : "🖥️  local DB";
-    console.log(`✅ MongoDB connected (${dbLabel})`);
+    console.log("✅ MongoDB connected");
   } catch (err) {
     console.error("❌ MongoDB connection failed:", err.message);
     process.exit(1);

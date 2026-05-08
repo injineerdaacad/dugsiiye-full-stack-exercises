@@ -42,11 +42,12 @@ Use `.env.example` as the template.
 
 Required variables:
 
-- `NODE_ENV`
 - `PORT`
 - `BASE_URL`
 - `MONGO_URI`
 - `ALLOWED_ORIGINS`
+- `ENABLE_HTTP_LOGS`
+- `RATE_LIMIT_MAX`
 - `JWT_SECRET`
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_API_KEY`
@@ -78,11 +79,13 @@ Live URLs:
 2. In your hosting platform, create a new project from your GitHub repo.
 3. Set the start command to `npm start` (usually auto-detected).
 4. Add environment variables in the platform dashboard (do not upload `.env`):
-   - `NODE_ENV=production`
    - `PORT` (most platforms inject this automatically)
    - `BASE_URL` = your public API URL (recommended)
    - `MONGO_URI`
    - `ALLOWED_ORIGINS` (frontend URL(s), comma-separated)
+   - `TRUST_PROXY=1` (if your platform uses a proxy)
+   - `ENABLE_HTTP_LOGS=false` (optional)
+   - `RATE_LIMIT_MAX=100` (optional)
    - `JWT_SECRET`
    - `CLOUDINARY_CLOUD_NAME`
    - `CLOUDINARY_API_KEY`
@@ -96,7 +99,7 @@ npm run seed:admin
 ```
 
 Notes:
-- In production, this API enables trusted proxy mode. Override with `TRUST_PROXY` if needed.
+- Set `TRUST_PROXY=1` only when your deployment platform needs trusted proxy support.
 - Set `BASE_URL` explicitly in your deployment platform.
 
 ## API Documentation

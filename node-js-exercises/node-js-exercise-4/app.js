@@ -21,9 +21,8 @@ import { swaggerSpec } from "./utility/swagger.js";
 
 const createApp = () => {
   const app = express();
-  const isProduction = process.env.NODE_ENV === "production";
 
-  if (isProduction) {
+  if (process.env.TRUST_PROXY) {
     app.set("trust proxy", process.env.TRUST_PROXY || 1);
   }
 

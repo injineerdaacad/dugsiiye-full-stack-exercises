@@ -6,7 +6,7 @@ morgan.token("date_time", () => strftime());
 const morganFormat = ":date_time | :method :url :status :response-time ms";
 
 const logger = (req, res, next) => {
-  if (process.env.NODE_ENV !== "development") {
+  if (process.env.ENABLE_HTTP_LOGS === "false") {
     return next();
   }
 
