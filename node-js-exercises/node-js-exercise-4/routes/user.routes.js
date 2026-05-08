@@ -1,6 +1,7 @@
 import express from "express";
 
 import {
+  createUser,
   deleteUser,
   getUserById,
   getUsers,
@@ -9,7 +10,7 @@ import {
 import requireAuth from "../middlewares/requireAuth.middleware.js";
 import requireRole from "../middlewares/requireRole.middleware.js";
 import validate from "../middlewares/validate.zod.middleware.js";
-import { UpdateUserSchema } from "../schemas/user.schema.js";
+import { CreateManagedUserSchema, UpdateUserSchema } from "../schemas/user.schema.js";
 
 const router = express.Router();
 
@@ -28,6 +29,22 @@ const router = express.Router();
  *         description: Admin access required
  */
 router.get("/", requireAuth, requireRole("admin"), getUsers);
+
+/**
+ * @swagger
+ * /users:
+ *   post:
+ *     summary: Create a user
+ *     tags: [Users]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       201:
+ *         description: User created successfully
+ *       403:
+ *         description: Admin access required
+ */
+router.post("/", requireAuth, requireRole("admin"), validate(CreateManagedUserSchema), createUser);
 
 /**
  * @swagger

@@ -13,6 +13,12 @@ export const CreateUserSchema = z.object({
     .max(100, "Password must be at most 100 characters long"),
 });
 
+export const CreateManagedUserSchema = CreateUserSchema.extend({
+  role: z.enum(["user", "admin"]).optional(),
+
+  isActive: z.boolean().optional(),
+});
+
 export const UpdateUserSchema = z.object({
   name: z.string()
     .min(2, "Name must be at least 2 characters long")

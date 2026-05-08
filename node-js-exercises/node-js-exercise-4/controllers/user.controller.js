@@ -33,6 +33,32 @@ export const getUsers = async (req, res) => {
   });
 };
 
+export const createUser = async (req, res) => {
+  const existingUser = await User.findOne({ email: req.body.email });
+
+  if (existingUser) {
+    const error = new Error("Email is already registered");
+    error.statusCode = 409;
+    throw error;
+  }
+
+  const user = await User.create({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    role: req.body.role ?? "user",
+    isActive: req.body.isActive ?? true,
+    createdBy: req.user.id,
+    updatedBy: req.user.id,
+  });
+
+  res.status(201).json({
+    success: true,
+    message: "User created successfully",
+    user: getUserResponse(user),
+  });
+};
+
 export const getUserById = async (req, res) => {
   const { id } = req.params;
 

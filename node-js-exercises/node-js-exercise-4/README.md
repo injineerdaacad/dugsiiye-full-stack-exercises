@@ -37,7 +37,7 @@ utility/        # JWT, Swagger, helper utilities
 
 ## Environment Variables
 
-Use `.env.development` for local and `.env.production` for production.
+Use one `.env` file for local development.
 Use `.env.example` as the template.
 
 Required variables:
@@ -77,7 +77,7 @@ Live URLs:
 1. Push this project to GitHub.
 2. In your hosting platform, create a new project from your GitHub repo.
 3. Set the start command to `npm start` (usually auto-detected).
-4. Add environment variables in the platform dashboard (do not upload `.env.production`):
+4. Add environment variables in the platform dashboard (do not upload `.env`):
    - `NODE_ENV=production`
    - `PORT` (most platforms inject this automatically)
    - `BASE_URL` = your public API URL (recommended)
@@ -116,8 +116,7 @@ npm run seed
 
 Seed behavior:
 
-- `npm run seed` uses `.env.production`
-- `npm run seed-local` uses `.env.development`
+- `npm run seed` uses `.env`
 
 ## API Base Routes
 

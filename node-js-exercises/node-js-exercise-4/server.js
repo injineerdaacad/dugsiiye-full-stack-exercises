@@ -1,8 +1,11 @@
 import dotenv from "dotenv";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const nodeEnv = process.env.NODE_ENV || "development";
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
 
-dotenv.config({ path: `.env.${nodeEnv}`, quiet: true });
+dotenv.config({ path: path.join(currentDir, ".env"), quiet: true });
 
 const { default: connectDB } = await import("./config/db.js");
 const { default: createApp } = await import("./app.js");
