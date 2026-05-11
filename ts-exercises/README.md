@@ -6,6 +6,6 @@ This repository contains TypeScript exercises for learning how to use TypeScript
 
 Each folder focuses on a specific TypeScript concept. Go through them in order for the best results:
 
-- 📁 [typescript-exercise-1](./typescript-exercise-1/) – TypeScript Variables
-- 📁 [typescript-react-exercise](./typescript-react-exercise/) – TypeScript Array and Tuple
-- 📁 [typescript-nodejs-exercise](./typescript-nodejs-exercise/) – TypeScript Functions
+- 📁 [ts-exercise-1](./ts-exercise-1/) – TypeScript Variables
+- 📁 [ts-exercise-2](./ts-exercise-2/) – TypeScript Array and Tuple
+- 📁 [ts-exercise-3](./ts-exercise-3/) – TypeScript Functions
