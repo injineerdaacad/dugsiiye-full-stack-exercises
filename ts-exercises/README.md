@@ -9,3 +9,6 @@ Each folder focuses on a specific TypeScript concept. Go through them in order f
 - 📁 [ts-exercise-1](./ts-exercise-1/) – TypeScript Variables
 - 📁 [ts-exercise-2](./ts-exercise-2/) – TypeScript Array and Tuple
 - 📁 [ts-exercise-3](./ts-exercise-3/) – TypeScript Functions
+- 📁 [ts-exercise-4](./ts-exercise-4/) – Describing Object Shapes with interface and type
+- 📁 [ts-exercise-5](./ts-exercise-5/) – Generics – Writing Truly Reusable and Safe Code
+- 📁 [ts-exercise-6](./ts-exercise-6/) – enum, and as in TypeScript
