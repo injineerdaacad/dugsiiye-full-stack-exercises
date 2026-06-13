@@ -11,5 +11,4 @@
 - 📂 [Node JS Exercises](./node-js-exercises) — Practice working with Backend using **Node JS** and **Express**.
 - 📂 [Personal Finance Tracker](./personal-finance-tracker) — Full Stack Project
 - 📂 [TS Exercises](./ts-exercises) — All practice for TS logic and interactivity.
-
-
+- 📂 [nextjs Exercises](./nextjs-exercises) — All practice for Next JS Pages and Routes and all FullStack.
