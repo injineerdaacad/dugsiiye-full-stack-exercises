@@ -1,6 +1,7 @@
 .vscode/
 .env
 .sixth
+.claude/
 
 css-projects/
 js-projects/
