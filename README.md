@@ -12,3 +12,4 @@
 - 📂 [Personal Finance Tracker](./personal-finance-tracker) — Full Stack Project
 - 📂 [TS Exercises](./ts-exercises) — All practice for TS logic and interactivity.
 - 📂 [Next.js Exercises](./nextjs-exercises) — All practice for Next JS Pages and Routes and all FullStack.
+- 📂 [AI Engineering Exercises](./ai-engineering-exercise-1) — All practice for AI Engineering.
