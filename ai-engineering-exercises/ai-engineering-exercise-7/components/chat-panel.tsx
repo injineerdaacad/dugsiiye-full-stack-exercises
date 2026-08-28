@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import type { FileUIPart } from "ai";
+import { Streamdown } from "streamdown";
 import { ToolResult, type ToolPart } from "@/components/tool-result";
 
 function fileToDataUrl(file: File): Promise<string> {
@@ -46,13 +47,21 @@ export function ChatPanel() {
           {messages.map((message) => (
             <div key={message.id} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
               <div
-                className={`max-w-xl rounded-lg px-4 py-3 ${
+                className={`max-w-2xl rounded-lg px-4 py-3 ${
                   message.role === "user" ? "bg-emerald-600 text-white" : "border border-zinc-200 bg-white text-zinc-900"
                 }`}
               >
                 {message.parts.map((part, i) => {
                   if (part.type === "text") {
-                    return (
+                    return message.role === "assistant" ? (
+                      <Streamdown
+                        key={i}
+                        className="prose prose-sm max-w-none prose-headings:text-zinc-900 prose-p:text-zinc-700 prose-strong:text-zinc-900 prose-li:text-zinc-700"
+                        parseIncompleteMarkdown
+                      >
+                        {part.text}
+                      </Streamdown>
+                    ) : (
                       <div key={i} className="whitespace-pre-wrap text-sm">
                         {part.text}
                       </div>
