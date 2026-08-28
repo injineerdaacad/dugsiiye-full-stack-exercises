@@ -1,0 +1,12 @@
+[
+  { "id": "banaadir-vet-1", "name": "Banaadir Livestock Clinic", "region": "Banaadir", "phone": "+252-61-1000001", "services": ["general vet care", "vaccination"] },
+  { "id": "woqooyi-galbeed-vet-1", "name": "Hargeisa Agrovet Center", "region": "Woqooyi Galbeed", "phone": "+252-63-1000002", "services": ["agrovet supplies", "deworming", "vaccination"] },
+  { "id": "bay-vet-1", "name": "Baidoa Animal Health Post", "region": "Bay", "phone": "+252-61-1000003", "services": ["general vet care", "tick control"] },
+  { "id": "lower-shabelle-vet-1", "name": "Shabelle Hoose Vet Services", "region": "Lower Shabelle", "phone": "+252-61-1000004", "services": ["general vet care", "dairy cattle"] },
+  { "id": "bari-vet-1", "name": "Bosaso Livestock Clinic", "region": "Bari", "phone": "+252-90-1000005", "services": ["camel health", "general vet care"] },
+  { "id": "nugaal-vet-1", "name": "Garowe Agrovet & Clinic", "region": "Nugaal", "phone": "+252-90-1000006", "services": ["agrovet supplies", "vaccination"] },
+  { "id": "togdheer-vet-1", "name": "Burco Animal Health Center", "region": "Togdheer", "phone": "+252-63-1000007", "services": ["general vet care", "camel and small ruminants"] },
+  { "id": "gedo-vet-1", "name": "Gedo Livestock Support", "region": "Gedo", "phone": "+252-61-1000008", "services": ["general vet care"] },
+  { "id": "jubbada-hoose-vet-1", "name": "Kismayo Vet Clinic", "region": "Jubbada Hoose", "phone": "+252-61-1000009", "services": ["general vet care", "cattle"] },
+  { "id": "sanaag-vet-1", "name": "Erigavo Animal Health Post", "region": "Sanaag", "phone": "+252-63-1000010", "services": ["camel health", "vaccination"] }
+]

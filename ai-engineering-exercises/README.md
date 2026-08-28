@@ -15,3 +15,6 @@ These sequential exercises focus on one concept at a time:
   - [movie-database-tool](./ai-engineering-exercise-5/movie-database-tool/) - OMDb search, details, recommendations
   - [dad-jokes-tool](./ai-engineering-exercise-5/dad-jokes-tool/) - jokes with ratings and offline fallback
 - 📁 [ai-engineering-exercise-6](./ai-engineering-exercise-6/) - AI Chat App
+
+
+- 📁 [ai-engineering-exercise-7](./ai-engineering-exercise-7/) - Livestock Doctor ChatBot

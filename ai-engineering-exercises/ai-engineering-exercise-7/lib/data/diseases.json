@@ -1,0 +1,398 @@
+[
+  {
+    "id": "surra-trypanosomiasis",
+    "animalTypes": ["camel"],
+    "diseaseName": "Surra (Trypanosomiasis)",
+    "cause": "Trypanosoma evansi",
+    "symptoms": [
+      "Intermittent high fever",
+      "Progressive emaciation and muscle wasting",
+      "Anemia and pale mucous membranes",
+      "Swelling of the limbs and ventral abdomen",
+      "Decreased milk production and weakness"
+    ],
+    "transmission": "Mechanically transmitted by biting flies such as Tabanus (horseflies) and Stomoxys (stable flies).",
+    "treatment": "Administration of specific trypanocidal drugs paired with supportive care and rest.",
+    "medicine": "Quinapyramine sulfate/chloride, Melarsomine hydrochloride, or Suramin",
+    "prevention": "Control biting fly populations around water points and treat infected animals promptly.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "camelpox",
+    "animalTypes": ["camel"],
+    "diseaseName": "Camelpox",
+    "cause": "Camelpox virus (Orthopoxvirus family)",
+    "symptoms": [
+      "Fever and depression",
+      "Skin papules and pustules around lips, nose, and eyelids",
+      "Swollen head and throat region",
+      "Mucopurulent nasal discharge",
+      "Loss of appetite"
+    ],
+    "transmission": "Direct contact between infected and healthy camels, scab particles, and contaminated feeding troughs.",
+    "treatment": "Supportive therapy to prevent secondary bacterial skin and lung infections, along with local lesion cleansing.",
+    "medicine": "Broad-spectrum injectable antibiotics like Oxytetracycline and topical antiseptic sprays",
+    "prevention": "Vaccination with attenuated camelpox vaccine and isolation of infected herds.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "haemorrhagic-septicemia-pasteurellosis",
+    "animalTypes": ["camel", "cattle"],
+    "diseaseName": "Pasteurellosis (Haemorrhagic Septicemia)",
+    "cause": "Pasteurella multocida or Mannheimia haemolytica",
+    "symptoms": [
+      "Sudden onset of high fever",
+      "Severe respiratory distress and rapid breathing",
+      "Hot painful swelling in the throat and brisket",
+      "Profuse nasal discharge",
+      "Sudden collapse and high mortality"
+    ],
+    "transmission": "Inhalation or ingestion of bacteria triggered by physical stress, long trekking, drought, or overcrowding.",
+    "treatment": "Immediate systemic antimicrobial therapy combined with anti-inflammatory medication.",
+    "medicine": "Oxytetracycline, Penicillin-Streptomycin, or Sulfa drugs",
+    "prevention": "Prophylactic vaccination before stress periods and minimizing hardship during seasonal migrations.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "sarcoptic-mange-camel",
+    "animalTypes": ["camel"],
+    "diseaseName": "Sarcoptic Mange",
+    "cause": "Sarcoptes scabiei var. cameli",
+    "symptoms": [
+      "Severe itching, biting, and scratching against trees",
+      "Hair loss starting at head, neck, and flanks",
+      "Thickened, wrinkled, and crusted skin",
+      "Open skin sores and secondary bacterial infections",
+      "Severe weight loss"
+    ],
+    "transmission": "Direct contact with infested camels or indirect contact via shared trees, saddles, and equipment.",
+    "treatment": "Systemic injectable antiparasitic drugs combined with topical acaricide washes.",
+    "medicine": "Ivermectin injection or topical Amitraz/Deltamethrin wash",
+    "prevention": "Quarantine newly acquired camels and spray herds regularly with approved acaricides.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "gastrointestinal-helminthiasis",
+    "animalTypes": ["camel", "goat", "sheep"],
+    "diseaseName": "Gastrointestinal Nematodiasis (Internal Worms)",
+    "cause": "Haemonchus longistipes and Trichostrongylus species",
+    "symptoms": [
+      "Chronic weight loss and poor growth",
+      "Persistent or intermittent diarrhea",
+      "Pale conjunctiva and mucous membranes (anemia)",
+      "Bottle jaw (fluid accumulation under the lower jaw)",
+      "Rough hair coat"
+    ],
+    "transmission": "Ingestion of infective larvae from contaminated pastures or vegetation near watering holes.",
+    "treatment": "Administration of broad-spectrum oral or injectable anthelmintic remedies.",
+    "medicine": "Ivermectin, Albendazole, or Levamisole",
+    "prevention": "Strategic deworming at the start and end of rainy seasons and rotational grazing management.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "dermatophilosis-contagious-skin-necrosis",
+    "animalTypes": ["camel"],
+    "diseaseName": "Dermatophilosis (Contagious Skin Necrosis)",
+    "cause": "Dermatophilus congolensis",
+    "symptoms": [
+      "Matted paint-brush-like hair tufts",
+      "Thick exudative crusts and scabs on back and hump",
+      "Painful skin lesions",
+      "Loss of wool patches leaving raw skin",
+      "Secondary abscess formation"
+    ],
+    "transmission": "Bacterial entry into wet or damaged skin following heavy rainfall or tick bites.",
+    "treatment": "Systemic antimicrobial injections combined with gentle removal of crusts using antiseptic washes.",
+    "medicine": "Long-acting Oxytetracycline or Procaine Penicillin",
+    "prevention": "Control tick infestations and keep animals in dry, clean pens during rainy periods.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "anthrax",
+    "animalTypes": ["camel", "cattle", "goat", "sheep"],
+    "diseaseName": "Anthrax",
+    "cause": "Bacillus anthracis",
+    "symptoms": [
+      "Sudden death with little or no prior illness",
+      "Dark non-clotting blood discharging from nose, mouth, and anus",
+      "Rapid bloating of carcass after death",
+      "High fever and trembling just before death",
+      "Severe swelling of neck and throat area"
+    ],
+    "transmission": "Ingestion of persistent bacterial spores from contaminated soil or water during grazing.",
+    "treatment": "Immediate high-dose antibiotic therapy if caught early, though progression is usually fatal.",
+    "medicine": "Penicillin G or Oxytetracycline",
+    "prevention": "Annual vaccination in endemic pasture regions and safe deep burial of unopened carcasses with quicklime.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "peste-des-petits-ruminants-ppr",
+    "animalTypes": ["goat", "sheep"],
+    "diseaseName": "Peste des Petits Ruminants (PPR)",
+    "cause": "Morbillivirus (PPR virus)",
+    "symptoms": [
+      "High fever",
+      "Foul-smelling bloody diarrhea",
+      "Nasal and ocular discharge",
+      "Mouth sores and erosions",
+      "Severe pneumonia and coughing"
+    ],
+    "transmission": "Direct contact with infected secretions, respiratory aerosols, saliva, or feces.",
+    "treatment": "Supportive care including hydration, mouth cleaning with mild antiseptics, and broad-spectrum antibiotics to prevent secondary bacterial infections.",
+    "medicine": "Oxytetracycline or Penicillin-Streptomycin for secondary infections, plus anti-inflammatory drugs.",
+    "prevention": "Annual vaccination with live attenuated PPR vaccine and quarantine of newly introduced livestock.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "contagious-caprine-pleuropneumonia-ccpp",
+    "animalTypes": ["goat"],
+    "diseaseName": "Contagious Caprine Pleuropneumonia (CCPP)",
+    "cause": "Mycoplasma capricola subsp. capripneumoniae",
+    "symptoms": [
+      "Severe painful coughing",
+      "Labored breathing and grunting",
+      "High fever",
+      "Clear to purulent nasal discharge",
+      "Reluctance to move"
+    ],
+    "transmission": "Inhalation of infectious droplets exhaled by infected goats in close contact.",
+    "treatment": "Early antimicrobial therapy combined with supportive care before irreversible lung damage occurs.",
+    "medicine": "Tylosin, Oxytetracycline, or Florfenicol.",
+    "prevention": "Vaccination with CCPP inactivated vaccine, isolation of sick animals, and avoiding overcrowding.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "sheep-and-goat-pox",
+    "animalTypes": ["goat", "sheep"],
+    "diseaseName": "Sheep and Goat Pox",
+    "cause": "Capripoxvirus",
+    "symptoms": [
+      "Skin papules and scabs on unwoolled areas",
+      "High fever",
+      "Nasal and eye discharge",
+      "Swollen lymph nodes",
+      "Difficulty breathing"
+    ],
+    "transmission": "Direct contact with infected animals, scab material, respiratory droplets, or mechanically by biting insects.",
+    "treatment": "Symptomatic treatment including wound dressing to prevent fly strike and systemic antibiotics for secondary infections.",
+    "medicine": "Broad-spectrum antibiotics such as Oxytetracycline and topical antiseptics.",
+    "prevention": "Vaccination with live attenuated Capripoxvirus vaccine and vector control.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "rift-valley-fever",
+    "animalTypes": ["goat", "sheep", "cattle", "camel"],
+    "diseaseName": "Rift Valley Fever (RVF)",
+    "cause": "Phlebovirus (Rift Valley fever virus)",
+    "symptoms": [
+      "Mass abortion storms in herds",
+      "High mortality in newborn lambs and kids",
+      "High fever",
+      "Bloody nasal discharge and diarrhea",
+      "Jaundice"
+    ],
+    "transmission": "Bites from infected mosquitoes (primarily Aedes and Culex species) following heavy rains.",
+    "treatment": "Supportive care only; no targeted antiviral treatment is available. Handle carcasses with care due to human zoonotic risk.",
+    "medicine": "Supportive fluids and anti-inflammatory medications. Avoid invasive procedures due to bleeding risk.",
+    "prevention": "Vaccination prior to expected rain cycles and mosquito vector control.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "enterotoxemia-pulpy-kidney",
+    "animalTypes": ["goat", "sheep"],
+    "diseaseName": "Enterotoxemia (Pulpy Kidney)",
+    "cause": "Clostridium perfringens type D",
+    "symptoms": [
+      "Sudden death in rapidly growing young animals",
+      "Convulsions and opisthotonos (head pulled back)",
+      "Severe abdominal pain and bloat",
+      "Greenish watery diarrhea",
+      "Incoordination and staggering"
+    ],
+    "transmission": "Overgrowth of resident gut bacteria triggered by sudden dietary shifts to high-grain or lush pastures.",
+    "treatment": "Often rapidly fatal, but early intervention includes clostridial antitoxin, oral antibiotics, and gut motility support.",
+    "medicine": "Clostridium perfringens type D antitoxin and oral/parenteral Penicillin or Oxytetracycline.",
+    "prevention": "Vaccination with multivalent clostridial toxoid vaccine and gradual dietary transitions.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "heartwater-ehrlichiosis",
+    "animalTypes": ["goat", "sheep", "cattle"],
+    "diseaseName": "Heartwater (Ehrlichiosis)",
+    "cause": "Ehrlichia ruminantium",
+    "symptoms": [
+      "High sudden fever",
+      "High-stepping gait and circling",
+      "Chewing movements and tongue protrusion",
+      "Convulsions and sudden death",
+      "Fluid accumulation around heart and lungs"
+    ],
+    "transmission": "Bites of vector ticks belonging to the genus Amblyomma (bont ticks).",
+    "treatment": "Early administration of tetracyclines during the febrile stage before severe nervous signs develop.",
+    "medicine": "Long-acting Oxytetracycline combined with anti-inflammatory drugs like Flunixin meglumine.",
+    "prevention": "Regular tick control using acaricide dips, sprays, or pour-on formulations.",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "contagious-ecthyma-orf",
+    "animalTypes": ["goat", "sheep"],
+    "diseaseName": "Contagious Ecthyma (Orf / Sore Mouth)",
+    "cause": "Parapoxvirus",
+    "symptoms": [
+      "Thick scabs around muzzle and lips",
+      "Lesions on teats and udders",
+      "Reluctance of kids/lambs to suckle",
+      "Weight loss",
+      "Secondary skin infection"
+    ],
+    "transmission": "Direct contact with infected lesions or indirect contact via rough, thorny dryland vegetation.",
+    "treatment": "Supportive care focused on softening scabs, topical antiseptic application, and palatable soft feed.",
+    "medicine": "Topical iodine, antiseptic sprays, and systemic broad-spectrum antibiotics for severe secondary infections.",
+    "prevention": "Vaccination of vulnerable young stock by scarification and isolation of affected animals.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "foot-and-mouth-disease-fmd",
+    "animalTypes": ["goat", "sheep", "cattle"],
+    "diseaseName": "Foot and Mouth Disease (FMD)",
+    "cause": "Aphthovirus (FMD virus)",
+    "symptoms": [
+      "Blisters and erosions in interdigital space",
+      "Severe lameness and reluctance to walk",
+      "Mild oral blisters and drooling",
+      "Fever",
+      "Decreased milk production"
+    ],
+    "transmission": "Extremely contagious via direct contact, aerosol transmission, and virus-contaminated equipment or pasture.",
+    "treatment": "Symptomatic therapy including foot baths, wound care, and provision of soft feed and clean water.",
+    "medicine": "Topical antiseptics (copper sulfate footbaths, iodine) and systemic antibiotics for secondary infection.",
+    "prevention": "Vaccination matched to regional viral serotypes, movement restrictions, and strict biosecurity.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "haemonchosis-barbers-pole-worm",
+    "animalTypes": ["goat", "sheep"],
+    "diseaseName": "Haemonchosis (Barber's Pole Worm)",
+    "cause": "Haemonchus contortus",
+    "symptoms": [
+      "Bottle jaw (fluid swelling under jaw)",
+      "Severe anemia (pale lower eyelids)",
+      "Extreme weakness and lethargy",
+      "Rapid weight loss",
+      "Sudden collapse without diarrhea"
+    ],
+    "transmission": "Ingestion of infective L3 larvae present on pasture grasses during damp or rainy periods.",
+    "treatment": "Targeted anthelmintic deworming based on clinical scoring (e.g. FAMACHA) alongside iron and nutritional support.",
+    "medicine": "Ivermectin, Albendazole, Levamisole, or Closantel.",
+    "prevention": "Rotational grazing, selective deworming strategies, and pasture management.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "animal-trypanosomiasis-nagana",
+    "animalTypes": ["goat", "sheep", "cattle", "camel"],
+    "diseaseName": "Animal Trypanosomiasis (Nagana)",
+    "cause": "Trypanosoma congolense, Trypanosoma vivax, or Trypanosoma brucei",
+    "symptoms": [
+      "Intermittent fluctuating fever",
+      "Progressive emaciation and weakness",
+      "Anemia and pale mucous membranes",
+      "Swollen superficial lymph nodes",
+      "Decreased fertility and milk drop"
+    ],
+    "transmission": "Bites from tsetse flies (Glossina spp.) or mechanical transmission by biting flies like Tabanids.",
+    "treatment": "Administration of trypanocidal drugs combined with good nutrition and stress reduction.",
+    "medicine": "Diminazene aceturate or Isometamidium chloride.",
+    "prevention": "Vector control using traps, targets, pyrethroid pour-ons, and prophylactic drug treatment in high-risk zones.",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "mastitis-ruminants",
+    "animalTypes": ["cattle", "camel", "goat", "sheep"],
+    "diseaseName": "Mastitis",
+    "cause": "Bacterial pathogens including Staphylococcus aureus, Streptococcus species, and E. coli",
+    "symptoms": [
+      "Swollen, warm, or painful udder quarters",
+      "Clots, flakes, or watery milk",
+      "Decreased milk yields",
+      "Fever and lethargy in acute cases",
+      "Reluctance to walk or nurse young"
+    ],
+    "transmission": "Poor hygiene during milking, contaminated environment, or direct contact from infected animals",
+    "treatment": "Intramammary antibiotic infusions and systemic treatment for severe acute cases",
+    "medicine": "Intramammary penicillin/streptomycin or Cloxacillin combinations, and systemic Oxytetracycline",
+    "prevention": "Proper milking hygiene, udder washing, post-milking teat dipping, and dry period therapy",
+    "urgency": "see a vet soon"
+  },
+  {
+    "id": "blackleg-cattle",
+    "animalTypes": ["cattle", "sheep"],
+    "diseaseName": "Blackleg",
+    "cause": "Clostridium chauvoei",
+    "symptoms": [
+      "Sudden onset of severe lameness",
+      "Painful swelling in leg muscles",
+      "Crackling feeling under skin when pressed",
+      "High fever and lethargy",
+      "Sudden death"
+    ],
+    "transmission": "Ingestion of bacterial spores from contaminated soil",
+    "treatment": "Early treatment with high doses of antibiotics, though response is poor once clinical signs are advanced",
+    "medicine": "Penicillin or Oxytetracycline, along with anti-inflammatory drugs",
+    "prevention": "Routine vaccination with multi-strain clostridial vaccines",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "contagious-bovine-pleuropneumonia",
+    "animalTypes": ["cattle"],
+    "diseaseName": "Contagious Bovine Pleuropneumonia (CBPP)",
+    "cause": "Mycoplasma mycoides subsp. mycoides",
+    "symptoms": [
+      "High fever",
+      "Severe coughing and painful breathing",
+      "Nasal discharge",
+      "Standing with elbows turned out",
+      "Loss of appetite"
+    ],
+    "transmission": "Direct contact via inhalation of respiratory droplets from infected cattle",
+    "treatment": "Antibiotic treatment can reduce clinical signs but may leave chronic carrier status",
+    "medicine": "Tylosin or Oxytetracycline",
+    "prevention": "Annual vaccination, restricted animal movements, and isolation of affected herds",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "east-coast-fever-theileriosis",
+    "animalTypes": ["cattle"],
+    "diseaseName": "East Coast Fever (Theileriosis)",
+    "cause": "Theileria parva (protozoan parasite)",
+    "symptoms": [
+      "High persistent fever",
+      "Swollen lymph nodes behind ears and shoulders",
+      "Difficulty breathing and frothy nasal discharge",
+      "Corneal opacity",
+      "Severe weakness"
+    ],
+    "transmission": "Transmitted by the brown ear tick (Rhipicephalus appendiculatus)",
+    "treatment": "Specific antiprotozoal drugs administered early in the disease process",
+    "medicine": "Buparvaquone and supportive antimicrobial therapy",
+    "prevention": "Regular tick control using acaricide dips/sprays and vaccination",
+    "urgency": "see a vet urgently"
+  },
+  {
+    "id": "lumpy-skin-disease",
+    "animalTypes": ["cattle"],
+    "diseaseName": "Lumpy Skin Disease (LSD)",
+    "cause": "Lumpy skin disease virus (Capripoxvirus)",
+    "symptoms": [
+      "Firm, raised skin nodules all over the body",
+      "High fever",
+      "Swollen leg joints and lameness",
+      "Excessive salivation and nasal discharge",
+      "Reduced milk yield"
+    ],
+    "transmission": "Biting insects such as mosquitoes, biting flies, and ticks",
+    "treatment": "Supportive care focused on wound treatment and treating secondary bacterial infections",
+    "medicine": "Broad-spectrum antibiotics (Oxytetracycline), anti-inflammatories, and topical antiseptics",
+    "prevention": "Annual vaccination and insect vector control",
+    "urgency": "see a vet soon"
+  }
+]
