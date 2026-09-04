@@ -18,3 +18,4 @@ These sequential exercises focus on one concept at a time:
 
 
 - 📁 [ai-engineering-exercise-7](./ai-engineering-exercise-7/) - Livestock Doctor ChatBot
+- 📁 [ai-engineering-exercise-8](./ai-engineering-exercise-8/) - AI Research Pipeline (Inngest background agent jobs)
